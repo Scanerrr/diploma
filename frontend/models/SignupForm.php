@@ -13,6 +13,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $verifyCode;
 
     /**
      * @inheritdoc
@@ -20,19 +21,30 @@ class SignupForm extends Model
     public function rules()
     {
         return [
+            [['username', 'password', 'email'], 'required', 'message' => '{attribute} не может быть пустым'],
+
             ['username', 'filter', 'filter' => 'trim'],
-            ['username', 'required'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This username has already been taken.'],
-            ['username', 'string', 'min' => 2, 'max' => 255],
+            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким именем уже существует.'],
+            ['username', 'string', 'min' => 2, 'max' => 255, 'tooShort' => 'Имя должно быть не короче {min} символов'],
 
             ['email', 'filter', 'filter' => 'trim'],
-            ['email', 'required'],
-            ['email', 'email'],
+            ['email', 'email', 'message' => 'Неправильный Email.'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'This email address has already been taken.'],
+            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким Email уже существует.'],
 
-            ['password', 'required'],
-            ['password', 'string', 'min' => 6],
+            ['password', 'string', 'min' => 6, 'tooShort' => 'Пароль должен быть не короче {min} символов'],
+
+            // verifyCode needs to be entered correctly
+            ['verifyCode', 'captcha', 'message' => '{attribute} введен неправильно.'],
+        ];
+    }
+
+    public function attributeLabels() {
+        return [
+            'username' => 'Имя пользователя',
+            'password' => 'Пароль',
+            'email' => 'Email',
+            'verifyCode' => 'Код проверки',
         ];
     }
 
