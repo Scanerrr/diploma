@@ -1,0 +1,133 @@
+2016-04-21 22:01:21 [127.0.0.1][-][stm1kfn1e23h6c7nb5nhnjgq74][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(858): yii\db\Connection->open()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(477): yii\db\Connection->getSlavePdo()
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(754): yii\db\Schema->quoteValue('123123')
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('123123')
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(809): yii\db\Command->getRawSql()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one(NULL)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#12 C:\OpenServer\domains\diploma\common\models\User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#13 C:\OpenServer\domains\diploma\common\models\LoginForm.php(73): common\models\User::findByUsername('123123')
+#14 C:\OpenServer\domains\diploma\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#15 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#19 C:\OpenServer\domains\diploma\common\models\LoginForm.php(58): yii\base\Model->validate()
+#20 C:\OpenServer\domains\diploma\backend\controllers\SiteController.php(68): common\models\LoginForm->login()
+#21 [internal function]: backend\controllers\SiteController->actionLogin()
+#22 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#23 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#24 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#25 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#26 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#28 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(858): yii\db\Connection->open()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(477): yii\db\Connection->getSlavePdo()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(754): yii\db\Schema->quoteValue('123123')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('123123')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(809): yii\db\Command->getRawSql()
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one(NULL)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#10 C:\OpenServer\domains\diploma\common\models\User.php(82): yii\db\BaseActiveRecord::findOne(Array)
+#11 C:\OpenServer\domains\diploma\common\models\LoginForm.php(73): common\models\User::findByUsername('123123')
+#12 C:\OpenServer\domains\diploma\common\models\LoginForm.php(44): common\models\LoginForm->getUser()
+#13 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#17 C:\OpenServer\domains\diploma\common\models\LoginForm.php(58): yii\base\Model->validate()
+#18 C:\OpenServer\domains\diploma\backend\controllers\SiteController.php(68): common\models\LoginForm->login()
+#19 [internal function]: backend\controllers\SiteController->actionLogin()
+#20 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#21 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#22 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#23 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#24 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2016-04-21 22:01:21 [127.0.0.1][-][stm1kfn1e23h6c7nb5nhnjgq74][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'WGVHREZVQmQdPy4CdhxzDAE6DgcLYg49HCYJdycAClM.HAE1AycGLA=='
+    'LoginForm' => [
+        'username' => '123123'
+        'password' => '123123'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'stm1kfn1e23h6c7nb5nhnjgq74'
+    '_csrf' => 'f90c05307a94fcb7bff23713ad307b6da90e8fbfe174e0adc20f2b5b2399f120a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EZiF0I1hY_ICM7LYDCN3aUH7fyFqErDH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '198'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.back'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.back/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=stm1kfn1e23h6c7nb5nhnjgq74; _csrf=f90c05307a94fcb7bff23713ad307b6da90e8fbfe174e0adc20f2b5b2399f120a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EZiF0I1hY_ICM7LYDCN3aUH7fyFqErDH%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '8582'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461265281.144
+    'REQUEST_TIME' => 1461265281
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]

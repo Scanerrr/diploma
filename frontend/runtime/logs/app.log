@@ -1,0 +1,231 @@
+2016-04-21 22:55:55 [127.0.0.1][-][ojia3dlegbml7mo5e14csk1262][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(858): yii\db\Connection->open()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(477): yii\db\Connection->getSlavePdo()
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(754): yii\db\Schema->quoteValue('123')
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('123')
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(809): yii\db\Command->getRawSql()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'username')
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
+#13 C:\OpenServer\domains\diploma\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#14 C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#15 [internal function]: frontend\controllers\SiteController->actionSignup()
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('signup', Array)
+#19 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/signup', Array)
+#20 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(858): yii\db\Connection->open()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(477): yii\db\Connection->getSlavePdo()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(754): yii\db\Schema->quoteValue('123')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('123')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(809): yii\db\Command->getRawSql()
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), 'username')
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), Array)
+#11 C:\OpenServer\domains\diploma\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#12 C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#13 [internal function]: frontend\controllers\SiteController->actionSignup()
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('signup', Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/signup', Array)
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-04-21 22:55:55 [127.0.0.1][-][ojia3dlegbml7mo5e14csk1262][info][application] $_GET = [
+    'r' => 'site/signup'
+]
+
+$_POST = [
+    '_csrf' => 'TG8td2hlNVopJRQ2WQJRaRY6fUEJCX4NFjVUBhgmWmgtAQBGD1NFHw=='
+    'SignupForm' => [
+        'username' => '123'
+        'email' => '123@13.123'
+        'password' => '123123'
+    ]
+    'signup-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'ojia3dlegbml7mo5e14csk1262'
+    '_csrf' => '32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '177'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.front'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.front/index.php?r=site%2Fsignup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ojia3dlegbml7mo5e14csk1262; _csrf=32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '8967'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsignup'
+    'REQUEST_URI' => '/index.php?r=site%2Fsignup'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461268555.773
+    'REQUEST_TIME' => 1461268555
+    'argv' => [
+        0 => 'r=site%2Fsignup'
+    ]
+    'argc' => 1
+]
+2016-04-21 22:56:10 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(858): yii\db\Connection->open()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(845): yii\db\Connection->getMasterPdo()
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(477): yii\db\Connection->getSlavePdo()
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(754): yii\db\Schema->quoteValue('vadzelenin43@gm...')
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('vadzelenin43@gm...')
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(809): yii\db\Command->getRawSql()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\ExistValidator.php(117): yii\db\Query->exists()
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\ExistValidator->validateAttribute(Object(frontend\models\PasswordResetRequestForm), 'email')
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\PasswordResetRequestForm), Array)
+#13 C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php(173): yii\base\Model->validate()
+#14 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('request-passwor...', Array)
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/request-pa...', Array)
+#19 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2advanced' in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(858): yii\db\Connection->open()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(845): yii\db\Connection->getMasterPdo()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(477): yii\db\Connection->getSlavePdo()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Connection.php(754): yii\db\Schema->quoteValue('vadzelenin43@gm...')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('vadzelenin43@gm...')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(809): yii\db\Command->getRawSql()
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('fetchColumn', 0)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\ExistValidator.php(117): yii\db\Query->exists()
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\ExistValidator->validateAttribute(Object(frontend\models\PasswordResetRequestForm), 'email')
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\PasswordResetRequestForm), Array)
+#11 C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php(173): yii\base\Model->validate()
+#12 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('request-passwor...', Array)
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/request-pa...', Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+Additional Information:
+
+2016-04-21 22:56:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/request-password-reset'
+]
+
+$_POST = [
+    '_csrf' => 'bHRHdy5xX2sJPn42HxY7WDYhF0FPHRQ8Ni4.Bl4yMFkNGmpGSUcvLg=='
+    'PasswordResetRequestForm' => [
+        'email' => 'vadzelenin43@gmail.com'
+    ]
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'ojia3dlegbml7mo5e14csk1262'
+    '_csrf' => '32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '127'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.front'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.front/index.php?r=site%2Frequest-password-reset'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ojia3dlegbml7mo5e14csk1262; _csrf=32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '8969'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Frequest-password-reset'
+    'REQUEST_URI' => '/index.php?r=site%2Frequest-password-reset'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461268570.403
+    'REQUEST_TIME' => 1461268570
+    'argv' => [
+        0 => 'r=site%2Frequest-password-reset'
+    ]
+    'argc' => 1
+]
