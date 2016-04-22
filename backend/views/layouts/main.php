@@ -7,7 +7,6 @@ use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use common\widgets\NavBarCustom;
-use common\widgets\Alert;
 
 AppAsset::register($this);
 ?>
@@ -71,7 +70,6 @@ AppAsset::register($this);
             </div>
             <div class="col-sm-10">
                 <?php } else echo '<div class="col-sm-12">'; ?>
-                <?= Alert::widget() ?>
                 <?= $content ?>
             </div>
         </div>

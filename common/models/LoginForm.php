@@ -31,7 +31,8 @@ class LoginForm extends Model
         ];
     }
 
-    public function attributeLabels() {
+    public function attributeLabels()
+    {
         return [
             'username' => 'Имя пользователя',
             'password' => 'Пароль',
@@ -45,26 +46,43 @@ class LoginForm extends Model
      *
      * @param string $attribute the attribute currently being validated
      * @param array $params the additional name-value pairs given in the rule
+     * @return boolean
      */
     public function validatePassword($attribute, $params)
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Неправильное имя или пароль.');
+                Yii::$app->session->setFlash('error', 'Неправильное имя пользователя или пароль');
+                return false;
             }
         }
+        return true;
     }
 
     /**
      * Logs in a user using the provided username and password.
-     *
+     * @param $backend boolean whether login is called on backend.
      * @return boolean whether the user is logged in successfully
      */
-    public function login()
+    public function login($backend = false)
     {
         if ($this->validate()) {
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+            $user = $this->getUser();
+            if ($user) {
+                if ($backend) {
+                    if ($this->_user->role != User::ROLE_STUDENT) {
+                        return Yii::$app->user->login($this->_user, $this->rememberMe ? 3600 * 24 * 30 : 0);
+                    } else {
+                        Yii::$app->session->setFlash('error', 'У данного пользователя нет прав доступа.<br> Обратитесь к администратору.');
+                        return false;
+                    }
+                } else {
+                    return Yii::$app->user->login($this->_user, $this->rememberMe ? 3600 * 24 * 30 : 0);
+                }
+            } else {
+                return false;
+            }
         } else {
             return false;
         }

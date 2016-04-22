@@ -2269,3 +2269,277 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-04-22 17:31:28 [127.0.0.1][-][pd3os4vpmbpemp5pu0c4eu36g5][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'application.user' doesn't exist in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php:840
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(840): PDOStatement->execute()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 C:\OpenServer\domains\diploma\common\models\User.php(73): yii\db\BaseActiveRecord::findOne(Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity(2)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 C:\OpenServer\domains\diploma\frontend\views\site\index.php(12): yii\base\Component->__get('isGuest')
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', '[]')
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#15 C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#21 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'application.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user` WHERE (`id`=2) AND (`status`=10) in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(855): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('fetch', NULL)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveQuery.php(290): yii\db\Query->one(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveQuery->one()
+#5 C:\OpenServer\domains\diploma\common\models\User.php(73): yii\db\BaseActiveRecord::findOne(Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\User.php(614): common\models\User::findIdentity(2)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\User.php(176): yii\web\User->renewAuthStatus()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\User.php(346): yii\web\User->getIdentity()
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php(130): yii\web\User->getIsGuest()
+#10 C:\OpenServer\domains\diploma\frontend\views\site\index.php(12): yii\base\Component->__get('isGuest')
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', '[]')
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(frontend\controllers\SiteController))
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#15 C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php(75): yii\base\Controller->render('index')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#19 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#20 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#21 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#23 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'application.user' doesn't exist
+)
+
+2016-04-22 17:31:28 [127.0.0.1][-][pd3os4vpmbpemp5pu0c4eu36g5][info][application] $_COOKIE = [
+    '_csrf' => '32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE\";}'
+    'PHPSESSID' => 'pd3os4vpmbpemp5pu0c4eu36g5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'gsgejo'
+    '__captcha/site/captchacount' => 1
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.front/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE%22%3B%7D; PHPSESSID=pd3os4vpmbpemp5pu0c4eu36g5'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '5255'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461335488.841
+    'REQUEST_TIME' => 1461335488
+    'argv' => []
+    'argc' => 0
+]
+2016-04-22 23:41:56 [127.0.0.1][-][hjoh1r5scj6pl2crkrvcqhgr22][error][TypeError] 'TypeError: Argument 1 passed to yii\\web\\User::login() must implement interface yii\\web\\IdentityInterface, null given, called in C:\\OpenServer\\domains\\diploma\\common\\models\\LoginForm.php on line 77 and defined in C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\web\\User.php:233
+Stack trace:
+#0 C:\\OpenServer\\domains\\diploma\\common\\models\\LoginForm.php(77): yii\\web\\User->login(NULL, 2592000)
+#1 C:\\OpenServer\\domains\\diploma\\frontend\\controllers\\SiteController.php(90): common\\models\\LoginForm->login()
+#2 [internal function]: frontend\\controllers\\SiteController->actionLogin()
+#3 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\InlineAction.php(55): call_user_func_array(Array, Array)
+#4 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(154): yii\\base\\InlineAction->runWithParams(Array)
+#5 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php(454): yii\\base\\Controller->runAction(\'login\', Array)
+#6 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\web\\Application.php(84): yii\\base\\Module->runAction(\'site/login\', Array)
+#7 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))
+#8 C:\\OpenServer\\domains\\diploma\\frontend\\web\\index.php(18): yii\\base\\Application->run()
+#9 {main}'
+2016-04-22 23:41:56 [127.0.0.1][-][hjoh1r5scj6pl2crkrvcqhgr22][info][application] $_POST = [
+    '_csrf' => 'MkM3Um95VnFXCQ4TXh4yQmgWZ2QOFR0maBlOIx86OUNTLRpjCE8mNA=='
+    'LoginForm' => [
+        'username' => '123123'
+        'password' => '123123'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE\";}'
+    'PHPSESSID' => 'hjoh1r5scj6pl2crkrvcqhgr22'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'error' => -1
+    ]
+    'error' => 'Неправильное имя пользователя или пароль'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '198'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.front'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.front/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE%22%3B%7D; PHPSESSID=hjoh1r5scj6pl2crkrvcqhgr22'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '6493'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461357716.081
+    'REQUEST_TIME' => 1461357716
+    'argv' => []
+    'argc' => 0
+]
+2016-04-22 23:41:56 [127.0.0.1][-][hjoh1r5scj6pl2crkrvcqhgr22][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(TypeError))
+#6 {main}
+2016-04-22 23:41:56 [127.0.0.1][-][hjoh1r5scj6pl2crkrvcqhgr22][info][application] $_POST = [
+    '_csrf' => 'MkM3Um95VnFXCQ4TXh4yQmgWZ2QOFR0maBlOIx86OUNTLRpjCE8mNA=='
+    'LoginForm' => [
+        'username' => '123123'
+        'password' => '123123'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE\";}'
+    'PHPSESSID' => 'hjoh1r5scj6pl2crkrvcqhgr22'
+]
+
+$_SESSION = [
+    '__flash' => [
+        'error' => -1
+    ]
+    'error' => 'Неправильное имя пользователя или пароль'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '198'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.front'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.front/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=32866a836d4ff4264cd817cc10f351dac342e5d0de665990e5ba1e08f44a301aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22eJ9A1gd3ZUP6alKWZZyqpCo2an-1g6pE%22%3B%7D; PHPSESSID=hjoh1r5scj6pl2crkrvcqhgr22'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '6493'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461357716.081
+    'REQUEST_TIME' => 1461357716
+    'argv' => []
+    'argc' => 0
+]
