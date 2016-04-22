@@ -6,7 +6,7 @@
 use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
+use common\widgets\NavBarCustom;
 use common\widgets\Alert;
 
 AppAsset::register($this);
@@ -26,23 +26,23 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-    NavBar::begin([
+    NavBarCustom::begin([
         'brandLabel' => 'Электронная книга',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse',
         ],
     ]);
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
     } else {
         $menuItems = [
-            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Домашняя страница', 'url' => ['/site/index']],
         ];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Выйти (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link']
             )
             . Html::endForm()
@@ -52,12 +52,29 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
     ]);
-    NavBar::end();
+    NavBarCustom::end();
     ?>
+    <div class="container-fluid">
+        <div class="row">
+            <?php if (!Yii::$app->user->isGuest) { ?>
+            <div class="col-sm-2">
+                <?php
 
-    <div class="container">
-        <?= Alert::widget() ?>
-        <?= $content ?>
+                $menuItems = [
+                    ['label' => 'Домой', 'url' => '/'],
+                ];
+                echo Nav::widget([
+                    'options' => ['class' => ''],
+                    'items' => $menuItems,
+                ]);
+                ?>
+            </div>
+            <div class="col-sm-10">
+                <?php } else echo '<div class="col-sm-12">'; ?>
+                <?= Alert::widget() ?>
+                <?= $content ?>
+            </div>
+        </div>
     </div>
 </div>
 
