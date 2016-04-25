@@ -39,7 +39,7 @@ class UsersController extends Controller
 
     public function actionIndex()
     {
-        $usersPerPage = 10;
+        $usersPerPage = 5;
 
         $count = User::find()->count();
         $pages = new Pagination(['totalCount' => $count, 'pageSize' => $usersPerPage]);
