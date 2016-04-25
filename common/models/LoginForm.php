@@ -3,6 +3,7 @@ namespace common\models;
 
 use Yii;
 use yii\base\Model;
+use yii\web\Session;
 
 /**
  * Login form
@@ -70,6 +71,11 @@ class LoginForm extends Model
         if ($this->validate()) {
             $user = $this->getUser();
             if ($user) {
+
+                $session = new Session();
+                $session->open();
+                $session['role'] = $user->role;
+
                 if ($backend) {
                     if ($this->_user->role != User::ROLE_STUDENT) {
                         return Yii::$app->user->login($this->_user, $this->rememberMe ? 3600 * 24 * 30 : 0);

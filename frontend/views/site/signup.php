@@ -20,11 +20,13 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
 
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Ivan']) ?>
 
-            <?= $form->field($model, 'email') ?>
+            <?= $form->field($model, 'name')->textInput(['placeholder' => 'Иванов Иван Иванович']) ?>
 
-            <?= $form->field($model, 'password')->passwordInput() ?>
+            <?= $form->field($model, 'email')->input('email', ['placeholder' => 'example@dom.com']) ?>
+
+            <?= $form->field($model, 'password')->passwordInput(['placeholder' => '*******']) ?>
 
             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',

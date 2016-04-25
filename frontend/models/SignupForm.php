@@ -13,6 +13,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $name;
     public $verifyCode;
 
     /**
@@ -21,11 +22,14 @@ class SignupForm extends Model
     public function rules()
     {
         return [
-            [['username', 'password', 'email'], 'required', 'message' => '{attribute} не может быть пустым'],
+            [['username', 'password', 'email', 'name'], 'required', 'message' => '{attribute} не может быть пустым'],
 
             ['username', 'filter', 'filter' => 'trim'],
             ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким именем уже существует.'],
-            ['username', 'string', 'min' => 2, 'max' => 255, 'tooShort' => 'Имя должно быть не короче {min} символов'],
+            ['username', 'string', 'min' => 2, 'max' => 255, 'tooShort' => '{attribute} должно быть не короче {min} символов'],
+
+            ['name', 'filter', 'filter' => 'trim'],
+            ['name', 'string', 'min' => 2, 'max' => 255, 'tooShort' => '{attribute} должно быть не короче {min} символов'],
 
             ['email', 'filter', 'filter' => 'trim'],
             ['email', 'email', 'message' => 'Неправильный Email.'],
@@ -41,8 +45,9 @@ class SignupForm extends Model
 
     public function attributeLabels() {
         return [
-            'username' => 'Имя пользователя',
+            'username' => 'Логин',
             'password' => 'Пароль',
+            'name' => 'Имя пользователя',
             'email' => 'Email',
             'verifyCode' => 'Код проверки',
         ];
@@ -61,6 +66,7 @@ class SignupForm extends Model
         
         $user = new User();
         $user->username = $this->username;
+        $user->name = $this->name;
         $user->email = $this->email;
         $user->setPassword($this->password);
         $user->generateAuthKey();

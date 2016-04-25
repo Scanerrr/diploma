@@ -8,6 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use common\widgets\NavBarCustom;
 
+$user_role = Yii::$app->session->get('role');
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -59,9 +60,12 @@ AppAsset::register($this);
             <div class="col-sm-2">
                 <?php
 
-                $menuItems = [
-                    ['label' => 'Домой', 'url' => '/'],
-                ];
+                $menuItems = [];
+                if($user_role === 1) {
+                    $menuItems = [
+                        ['label' => 'Пользователи', 'url' => '/users/'],
+                    ];
+                }
                 echo Nav::widget([
                     'options' => ['class' => ''],
                     'items' => $menuItems,
@@ -83,6 +87,8 @@ AppAsset::register($this);
 </footer>
 
 <?php $this->endBody() ?>
+
+<?php $this->registerJsFile('/js/users.js'); ?>
 </body>
 </html>
 <?php $this->endPage() ?>
