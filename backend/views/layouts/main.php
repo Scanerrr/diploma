@@ -66,6 +66,7 @@ AppAsset::register($this);
                         ['label' => 'Пользователи', 'url' => '/users/'],
                     ];
                 }
+                $menuItems[] = ['label' => 'Документы', 'url' => '/documents/'];
                 echo Nav::widget([
                     'options' => ['class' => ''],
                     'items' => $menuItems,
