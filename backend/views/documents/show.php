@@ -5,15 +5,17 @@ use yii\widgets\LinkPager;
 <div class="container">
     <div class="row">
         <div class="col-sm-3">
-            <a data-toggle="modal" style="margin: 20px 0;" data-target=".bs-example-modal-sm" class="btn btn-danger">Удалить текущую лекцию</a>
+            <a data-toggle="modal" style="margin: 20px 0;" data-target=".bs-example-modal-sm" class="btn btn-danger">Удалить
+                текущую лекцию</a>
         </div>
         <div class="col-sm-3">
             <?= LinkPager::widget(['pagination' => $pages, 'hideOnSinglePage' => false]); ?>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6 bold"><strong>Iм`я викладача: </strong><span style="text-decoration: underline;"><?= $owner['name']; ?></span></div>
-        <div class="col-sm-6"><strong>Назва предмету:</strong> </div>
+        <div class="col-sm-6 bold"><strong>Iм`я викладача: </strong><span
+                style="text-decoration: underline;"><?= $owner['name']; ?></span></div>
+        <div class="col-sm-6"><strong>Назва предмету:</strong></div>
     </div>
     <div class="row">
         <h2><?= $document['name'] ?></h2>
