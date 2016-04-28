@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 use yii\widgets\LinkPager;
 ?>
 <h1>Документы</h1>
@@ -21,7 +22,7 @@ use yii\widgets\LinkPager;
     <?php foreach ($documents as $document) { ?>
         <tr>
             <td><?= $document['id'] ?></td>
-            <td><a href="/documents/show?page=<?= $document['id'] ?>"><?= $document['name'] ?></a></td>
+            <td><a href="/documents/show?id=<?= $document['id'] ?>"><?= HTML::encode($document['name']) ?></a></td>
         </tr>
     <?php } ?>
     </tbody>

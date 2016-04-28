@@ -43,25 +43,20 @@ class DocumentsController extends Controller
 
     public function actionShow()
     {
-        //pagination
-        $count = Documents::find()->count();
-        $pager = new Pagination(['totalCount' => $count, 'pageSize' => 1]);
-
         //grab current document by page id
-        $documentID = Yii::$app->request->get('page');
+        $documentID = Yii::$app->request->get('id');
         $documentID = intval($documentID);
 
         $document = Documents::find()->where(['id' => $documentID])->one();
 
         //get owner
-        $ownerID = Yii::$app->user->id;
+        $ownerID = $document['owner_id'];
         $owner = Documents::getOwnerNameByID($ownerID);
 
         if (!empty($document)) {
             return $this->render('show', [
                 'document' => $document,
-                'pages' => $pager,
-                'owner' => $owner
+                'owner' => $owner,
             ]);
         } else {
             return $this->redirect('/documents');

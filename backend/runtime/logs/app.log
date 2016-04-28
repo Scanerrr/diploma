@@ -10512,3 +10512,2000 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-04-29 01:42:16 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\LinkPager::getPageRange() in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(15): yii\base\Component->__call('getPageRange', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:42:16 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=2&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26857'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883336.744
+    'REQUEST_TIME' => 1461883336
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:43:06 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\Exception] yii\base\Exception: The "ids" property must be set. in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(4): common\widgets\CustomLinkPager->__construct(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:43:06 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=2&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26866'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883386.172
+    'REQUEST_TIME' => 1461883386
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:50:07 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\Exception] yii\base\Exception: The "ids" property must be set. in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): common\widgets\CustomLinkPager->__construct(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:50:07 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26921'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883807.87
+    'REQUEST_TIME' => 1461883807
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:52:21 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\ErrorException:2] yii\base\ErrorException: Declaration of common\widgets\CustomLinkPager::init(array $config) should be compatible with yii\widgets\LinkPager::init() in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:9
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php(9): yii\base\ErrorHandler->handleError(2, 'Declaration of ...', 'C:\\OpenServer\\d...', 9, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(288): include('C:\\OpenServer\\d...')
+#2 [internal function]: yii\BaseYii::autoload('common\\widgets\\...')
+#3 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): spl_autoload_call('common\\widgets\\...')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#8 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#9 [internal function]: backend\controllers\DocumentsController->actionShow()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-29 01:52:21 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26936'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883941.316
+    'REQUEST_TIME' => 1461883941
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:52:21 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\ErrorException:2] yii\base\ErrorException: Declaration of common\widgets\CustomLinkPager::init(array $config) should be compatible with yii\widgets\LinkPager::init() in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:9
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php(9): yii\base\ErrorHandler->handleError(2, 'Declaration of ...', 'C:\\OpenServer\\d...', 9, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(288): include('C:\\OpenServer\\d...')
+#2 [internal function]: yii\BaseYii::autoload('common\\widgets\\...')
+#3 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): spl_autoload_call('common\\widgets\\...')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#8 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#9 [internal function]: backend\controllers\DocumentsController->actionShow()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-29 01:52:21 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26940'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883941.808
+    'REQUEST_TIME' => 1461883941
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:52:22 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\ErrorException:2] yii\base\ErrorException: Declaration of common\widgets\CustomLinkPager::init(array $config) should be compatible with yii\widgets\LinkPager::init() in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:9
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php(9): yii\base\ErrorHandler->handleError(2, 'Declaration of ...', 'C:\\OpenServer\\d...', 9, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(288): include('C:\\OpenServer\\d...')
+#2 [internal function]: yii\BaseYii::autoload('common\\widgets\\...')
+#3 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): spl_autoload_call('common\\widgets\\...')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#8 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#9 [internal function]: backend\controllers\DocumentsController->actionShow()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-29 01:52:21 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26941'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883941.854
+    'REQUEST_TIME' => 1461883941
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:52:22 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\ErrorException:2] yii\base\ErrorException: Declaration of common\widgets\CustomLinkPager::init(array $config) should be compatible with yii\widgets\LinkPager::init() in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:9
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php(9): yii\base\ErrorHandler->handleError(2, 'Declaration of ...', 'C:\\OpenServer\\d...', 9, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(288): include('C:\\OpenServer\\d...')
+#2 [internal function]: yii\BaseYii::autoload('common\\widgets\\...')
+#3 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): spl_autoload_call('common\\widgets\\...')
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#8 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#9 [internal function]: backend\controllers\DocumentsController->actionShow()
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#16 {main}
+2016-04-29 01:52:22 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26944'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883942.036
+    'REQUEST_TIME' => 1461883942
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:52:32 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\Exception] yii\base\Exception: The "ids" property must be set. in C:\OpenServer\domains\diploma\common\widgets\CustomLinkPager.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): common\widgets\CustomLinkPager->__construct(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:52:32 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26946'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883952.316
+    'REQUEST_TIME' => 1461883952
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:52:55 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: common\widgets\CustomLinkPager::getPageRange() in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(15): yii\base\Component->__call('getPageRange', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:52:55 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26950'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461883975.069
+    'REQUEST_TIME' => 1461883975
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:53:32 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Missing required parameter "config" when instantiating "common\widgets\CustomLinkPager". in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php:453
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(366): yii\di\Container->resolveDependencies(Array, Object(ReflectionClass))
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('common\\widgets\\...', Array, Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('common\\widgets\\...', Array, Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#4 C:\OpenServer\domains\diploma\backend\views\documents\show.php(17): yii\base\Widget::widget(Array)
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#9 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#10 [internal function]: backend\controllers\DocumentsController->actionShow()
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#17 {main}
+2016-04-29 01:53:32 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26958'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884012.653
+    'REQUEST_TIME' => 1461884012
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:54:23 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][Error] 'Error: Class \'common\\widgets\\CustomLinkPager\' not found in C:\\OpenServer\\domains\\diploma\\backend\\views\\documents\\show.php:5
+Stack trace:
+#0 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(325): require()
+#1 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(247): yii\\base\\View->renderPhpFile(\'C:\\\\OpenServer\\\\d...\', Array)
+#2 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(149): yii\\base\\View->renderFile(\'C:\\\\OpenServer\\\\d...\', Array, Object(backend\\controllers\\DocumentsController))
+#3 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(377): yii\\base\\View->render(\'show\', Array, Object(backend\\controllers\\DocumentsController))
+#4 C:\\OpenServer\\domains\\diploma\\backend\\controllers\\DocumentsController.php(64): yii\\base\\Controller->render(\'show\', Array)
+#5 [internal function]: backend\\controllers\\DocumentsController->actionShow()
+#6 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(154): yii\\base\\InlineAction->runWithParams(Array)
+#8 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php(454): yii\\base\\Controller->runAction(\'show\', Array)
+#9 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\web\\Application.php(84): yii\\base\\Module->runAction(\'documents/show\', Array)
+#10 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))
+#11 C:\\OpenServer\\domains\\diploma\\backend\\web\\index.php(18): yii\\base\\Application->run()
+#12 {main}'
+2016-04-29 01:54:23 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26965'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884063.442
+    'REQUEST_TIME' => 1461884063
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:54:23 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#6 {main}
+2016-04-29 01:54:23 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26965'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884063.442
+    'REQUEST_TIME' => 1461884063
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:54:58 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][Error] 'Error: Class \'common\\widgets\\CustomLinkPager\' not found in C:\\OpenServer\\domains\\diploma\\backend\\views\\documents\\show.php:5
+Stack trace:
+#0 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(325): require()
+#1 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(247): yii\\base\\View->renderPhpFile(\'C:\\\\OpenServer\\\\d...\', Array)
+#2 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(149): yii\\base\\View->renderFile(\'C:\\\\OpenServer\\\\d...\', Array, Object(backend\\controllers\\DocumentsController))
+#3 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(377): yii\\base\\View->render(\'show\', Array, Object(backend\\controllers\\DocumentsController))
+#4 C:\\OpenServer\\domains\\diploma\\backend\\controllers\\DocumentsController.php(64): yii\\base\\Controller->render(\'show\', Array)
+#5 [internal function]: backend\\controllers\\DocumentsController->actionShow()
+#6 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(154): yii\\base\\InlineAction->runWithParams(Array)
+#8 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php(454): yii\\base\\Controller->runAction(\'show\', Array)
+#9 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\web\\Application.php(84): yii\\base\\Module->runAction(\'documents/show\', Array)
+#10 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))
+#11 C:\\OpenServer\\domains\\diploma\\backend\\web\\index.php(18): yii\\base\\Application->run()
+#12 {main}'
+2016-04-29 01:54:58 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26972'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884098.798
+    'REQUEST_TIME' => 1461884098
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:54:58 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#6 {main}
+2016-04-29 01:54:58 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26972'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884098.798
+    'REQUEST_TIME' => 1461884098
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:55:28 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\LinkPager::getPageRange() in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(15): yii\base\Component->__call('getPageRange', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:55:28 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26981'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884128.446
+    'REQUEST_TIME' => 1461884128
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 01:57:07 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\LinkPager::getPageRange() in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 C:\OpenServer\domains\diploma\backend\views\documents\show.php(15): yii\base\Component->__call('getPageRange', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(64): yii\base\Controller->render('show', Array)
+#6 [internal function]: backend\controllers\DocumentsController->actionShow()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-04-29 01:57:07 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '3'
+    'page' => '3'
+    'per-page' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=4&per-page=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '26994'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=3&page=3&per-page=1'
+    'REQUEST_URI' => '/documents/show?id=3&page=3&per-page=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884227.264
+    'REQUEST_TIME' => 1461884227
+    'argv' => [
+        0 => 'id=3&page=3&per-page=1'
+    ]
+    'argc' => 1
+]
+2016-04-29 02:07:04 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: documents/3 in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('3', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/3', Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:07:04 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=3&per-page=2'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27139'
+    'REDIRECT_URL' => '/documents/3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461884824.469
+    'REQUEST_TIME' => 1461884824
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 02:13:26 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: documents/1 in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('1', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/1', Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:13:26 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27189'
+    'REDIRECT_URL' => '/documents/1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461885206.946
+    'REQUEST_TIME' => 1461885206
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 02:21:14 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: documents/5 in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('5', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/5', Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:21:14 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3&page=1&per-page=10'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27331'
+    'REDIRECT_URL' => '/documents/5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/5'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461885674.202
+    'REQUEST_TIME' => 1461885674
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 02:21:46 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: documents/12 in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('12', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/12', Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:21:46 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27338'
+    'REDIRECT_URL' => '/documents/12'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/12'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461885706.098
+    'REQUEST_TIME' => 1461885706
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 02:22:52 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: documents/12 in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('12', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/12', Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:22:52 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27364'
+    'REDIRECT_URL' => '/documents/12'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/12'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461885772.568
+    'REQUEST_TIME' => 1461885772
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 02:27:53 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: documents/3 in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php:125
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('3', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/3', Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:27:53 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27446'
+    'REDIRECT_URL' => '/documents/3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/3'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461886073.557
+    'REQUEST_TIME' => 1461886073
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 02:35:41 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "documents/diploma.back/documents/show". in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/diplo...', Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-04-29 02:35:41 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27554'
+    'REDIRECT_URL' => '/documents/diploma.back/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=4'
+    'REQUEST_URI' => '/documents/diploma.back/documents/show?id=4'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461886541.095
+    'REQUEST_TIME' => 1461886541
+    'argv' => [
+        0 => 'id=4'
+    ]
+    'argc' => 1
+]
+2016-04-29 02:40:24 [127.0.0.1][-][-][error][Error] 'Error: Call to a member function getPage() on unknown in C:\\OpenServer\\domains\\diploma\\backend\\views\\documents\\show.php:53
+Stack trace:
+#0 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(325): require()
+#1 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(247): yii\\base\\View->renderPhpFile(\'C:\\\\OpenServer\\\\d...\', Array)
+#2 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\View.php(149): yii\\base\\View->renderFile(\'C:\\\\OpenServer\\\\d...\', Array, Object(backend\\controllers\\DocumentsController))
+#3 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(377): yii\\base\\View->render(\'show\', Array, Object(backend\\controllers\\DocumentsController))
+#4 C:\\OpenServer\\domains\\diploma\\backend\\controllers\\DocumentsController.php(67): yii\\base\\Controller->render(\'show\', Array)
+#5 [internal function]: backend\\controllers\\DocumentsController->actionShow()
+#6 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Controller.php(154): yii\\base\\InlineAction->runWithParams(Array)
+#8 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php(454): yii\\base\\Controller->runAction(\'show\', Array)
+#9 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\web\\Application.php(84): yii\\base\\Module->runAction(\'documents/show\', Array)
+#10 C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Application.php(375): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))
+#11 C:\\OpenServer\\domains\\diploma\\backend\\web\\index.php(18): yii\\base\\Application->run()
+#12 {main}'
+2016-04-29 02:40:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '12'
+    'page' => '5'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27631'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=12&page=5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=12&page=5'
+    'REQUEST_URI' => '/documents/show?id=12&page=5'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461886824.8
+    'REQUEST_TIME' => 1461886824
+    'argv' => [
+        0 => 'id=12&page=5'
+    ]
+    'argc' => 1
+]
+2016-04-29 02:40:24 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php:57
+
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(57): serialize(Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-debug\LogTarget.php(118): yii\debug\LogTarget->export()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(Error))
+#6 {main}
+2016-04-29 02:40:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '12'
+    'page' => '5'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27631'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=12&page=5'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=12&page=5'
+    'REQUEST_URI' => '/documents/show?id=12&page=5'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461886824.8
+    'REQUEST_TIME' => 1461886824
+    'argv' => [
+        0 => 'id=12&page=5'
+    ]
+    'argc' => 1
+]
+2016-04-29 02:49:28 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The "pagination" property must be set. in C:\OpenServer\domains\diploma\common\widgets\LinkPager.php:120
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Object.php(107): common\widgets\LinkPager->init()
+#1 C:\OpenServer\domains\diploma\backend\views\documents\show.php(5): yii\base\Object->__construct(Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#6 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(59): yii\base\Controller->render('show', Array)
+#7 [internal function]: backend\controllers\DocumentsController->actionShow()
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#14 {main}
+2016-04-29 02:49:28 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '5'
+    'page' => '0'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/show?id=11&page=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '27735'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=5&page=0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=5&page=0'
+    'REQUEST_URI' => '/documents/show?id=5&page=0'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461887368.816
+    'REQUEST_TIME' => 1461887368
+    'argv' => [
+        0 => 'id=5&page=0'
+    ]
+    'argc' => 1
+]
