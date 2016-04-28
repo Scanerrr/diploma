@@ -5,8 +5,9 @@ namespace backend\controllers;
 use common\models\Documents;
 use Yii;
 use yii\data\Pagination;
+use yii\web\Controller;
 
-class DocumentsController extends \yii\web\Controller
+class DocumentsController extends Controller
 {
     public function actionIndex()
     {
@@ -29,7 +30,6 @@ class DocumentsController extends \yii\web\Controller
     {
         $model = new Documents();
 
-
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save();
             $this->redirect('../');
@@ -43,14 +43,25 @@ class DocumentsController extends \yii\web\Controller
 
     public function actionShow()
     {
-        $documentID = Yii::$app->request->get('id');
+        //pagination
+        $count = Documents::find()->count();
+        $pager = new Pagination(['totalCount' => $count, 'pageSize' => 1]);
+
+        //grab current document by page id
+        $documentID = Yii::$app->request->get('page');
         $documentID = intval($documentID);
 
         $document = Documents::find()->where(['id' => $documentID])->one();
 
+        //get owner
+        $ownerID = Yii::$app->user->id;
+        $owner = Documents::getOwnerNameByID($ownerID);
+
         if (!empty($document)) {
             return $this->render('show', [
-                'document' => $document
+                'document' => $document,
+                'pages' => $pager,
+                'owner' => $owner
             ]);
         } else {
             return $this->redirect('/documents');

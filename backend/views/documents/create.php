@@ -10,8 +10,13 @@
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="users">
         <?php $form = \yii\bootstrap\ActiveForm::begin([]); ?>
-        <?= $form->field($model, 'name')->textInput(); ?>
-        <?= $form->field($model, 'text')->textarea(); ?>
+        <?= $form
+            ->field($model, 'name')->textInput(); ?>
+        <?= $form
+            ->field($model, 'text')->textarea(); ?>
+        <?= $form
+            ->field($model, 'owner_id', ['template' => '{input}'])
+            ->hiddenInput(['value' => Yii::$app->user->id]); ?>
         <button type="submit" class="btn btn-default">Создать</button>
         <?php $form->end(); ?>
     </div>

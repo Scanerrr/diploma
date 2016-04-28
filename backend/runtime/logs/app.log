@@ -9904,3 +9904,611 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-04-28 23:32:12 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The "pagination" property must be set. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Object.php(107): yii\widgets\LinkPager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\widgets\\Lin...', Array, Array)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Lin...', Array, Array)
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#6 C:\OpenServer\domains\diploma\backend\views\documents\show.php(7): yii\base\Widget::widget()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#11 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(53): yii\base\Controller->render('show', Array)
+#12 [internal function]: backend\controllers\DocumentsController->actionShow()
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+2016-04-28 23:32:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25299'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/documents/show?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461875532.519
+    'REQUEST_TIME' => 1461875532
+    'argv' => [
+        0 => 'id=1'
+    ]
+    'argc' => 1
+]
+2016-04-28 23:36:05 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: The "pagination" property must be set. in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\widgets\LinkPager.php:120
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Object.php(107): yii\widgets\LinkPager->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(368): ReflectionClass->newInstanceArgs(Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\widgets\\Lin...', Array, Array)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Lin...', Array, Array)
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Widget.php(97): yii\BaseYii::createObject(Array)
+#6 C:\OpenServer\domains\diploma\backend\views\documents\show.php(7): yii\base\Widget::widget()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('show', Array, Object(backend\controllers\DocumentsController))
+#11 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(59): yii\base\Controller->render('show', Array)
+#12 [internal function]: backend\controllers\DocumentsController->actionShow()
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('show', Array)
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/show', Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+2016-04-28 23:36:05 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25324'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/documents/show?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461875765.404
+    'REQUEST_TIME' => 1461875765
+    'argv' => [
+        0 => 'id=1'
+    ]
+    'argc' => 1
+]
+2016-04-28 23:40:57 [127.0.0.1][-][-][error][ParseError] unserialize('O:10:"ParseError":7:{s:10:"' . "\0" . '*' . "\0" . 'message";s:68:"syntax error, unexpected \'=>\' (T_DOUBLE_ARROW), expecting \',\' or \')\'";s:13:"' . "\0" . 'Error' . "\0" . 'string";s:0:"";s:7:"' . "\0" . '*' . "\0" . 'code";i:0;s:7:"' . "\0" . '*' . "\0" . 'file";s:73:"C:\\OpenServer\\domains\\diploma\\backend\\controllers\\DocumentsController.php";s:7:"' . "\0" . '*' . "\0" . 'line";i:48;s:12:"' . "\0" . 'Error' . "\0" . 'trace";a:8:{i:0;a:4:{s:8:"function";s:8:"autoload";s:5:"class";s:11:"yii\\BaseYii";s:4:"type";s:2:"::";s:4:"args";a:1:{i:0;s:39:"backend\\controllers\\DocumentsController";}}i:1;a:2:{s:8:"function";s:17:"spl_autoload_call";s:4:"args";a:1:{i:0;s:39:"backend\\controllers\\DocumentsController";}}i:2;a:4:{s:4:"file";s:65:"C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php";s:4:"line";i:562;s:8:"function";s:12:"class_exists";s:4:"args";a:1:{i:0;s:39:"backend\\controllers\\DocumentsController";}}i:3;a:6:{s:4:"file";s:65:"C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php";s:4:"line";i:520;s:8:"function";s:20:"createControllerByID";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;s:9:"documents";}}i:4;a:6:{s:4:"file";s:65:"C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Module.php";s:4:"line";i:448;s:8:"function";s:16:"createController";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;s:4:"show";}}i:5;a:6:{s:4:"file";s:69:"C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\web\\Application.php";s:4:"line";i:84;s:8:"function";s:9:"runAction";s:5:"class";s:15:"yii\\base\\Module";s:4:"type";s:2:"->";s:4:"args";a:2:{i:0;s:14:"documents/show";i:1;a:1:{s:2:"id";s:1:"1";}}}i:6;a:6:{s:4:"file";s:70:"C:\\OpenServer\\domains\\diploma\\vendor\\yiisoft\\yii2\\base\\Application.php";s:4:"line";i:375;s:8:"function";s:13:"handleRequest";s:5:"class";s:19:"yii\\web\\Application";s:4:"type";s:2:"->";s:4:"args";a:1:{i:0;O:15:"yii\\web\\Request":28:{s:20:"enableCsrfValidation";b:1;s:9:"csrfParam";s:5:"_csrf";s:10:"csrfCookie";a:1:{s:8:"httpOnly";b:1;}s:16:"enableCsrfCookie";b:1;s:22:"enableCookieValidation";b:1;s:19:"cookieValidationKey";s:32:"wz9Dp1EhhUaqM5TNhcdLSjPQYyjPwpiM";s:11:"methodParam";s:7:"_method";s:7:"parsers";a:0:{}s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_cookies";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_headers";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_rawBody";N;s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_bodyParams";N;s:29:"' . "\0" . 'yii\\web\\Request' . "\0" . '_queryParams";N;s:26:"' . "\0" . 'yii\\web\\Request' . "\0" . '_hostInfo";N;s:25:"' . "\0" . 'yii\\web\\Request' . "\0" . '_baseUrl";s:0:"";s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_scriptUrl";s:10:"/index.php";s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_scriptFile";N;s:26:"' . "\0" . 'yii\\web\\Request' . "\0" . '_pathInfo";s:14:"documents/show";s:21:"' . "\0" . 'yii\\web\\Request' . "\0" . '_url";s:20:"/documents/show?id=1";s:22:"' . "\0" . 'yii\\web\\Request' . "\0" . '_port";N;s:28:"' . "\0" . 'yii\\web\\Request' . "\0" . '_securePort";N;s:30:"' . "\0" . 'yii\\web\\Request' . "\0" . '_contentTypes";N;s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_languages";N;s:27:"' . "\0" . 'yii\\web\\Request' . "\0" . '_csrfToken";N;s:35:"' . "\0" . 'yii\\base\\Request' . "\0" . '_isConsoleRequest";N;s:27:"' . "\0" . 'yii\\base\\Component' . "\0" . '_events";a:0:{}s:30:"' . "\0" . 'yii\\base\\Component' . "\0" . '_behaviors";N;s:29:"' . "\0" . 'yii\\base\\Request' . "\0" . '_scriptFile";N;}}}i:7;a:6:{s:4:"file";s:51:"C:\\OpenServer\\domains\\diploma\\backend\\web\\index.php";s:4:"line";i:18;s:8:"function";s:3:"run";s:5:"class";s:20:"yii\\base\\Application";s:4:"type";s:2:"->";s:4:"args";a:0:{}}}s:15:"' . "\0" . 'Error' . "\0" . 'previous";N;}')
+2016-04-28 23:40:57 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25381'
+    'REDIRECT_URL' => '/documents/show'
+    'REDIRECT_QUERY_STRING' => 'id=1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/documents/show?id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461876057.728
+    'REQUEST_TIME' => 1461876057
+    'argv' => [
+        0 => 'id=1'
+    ]
+    'argc' => 1
+]
+2016-04-28 23:59:56 [127.0.0.1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'owner_id' doesn't have a default value in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php:784
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(784): PDOStatement->execute()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('documents', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(35): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'owner_id' doesn't have a default value
+The SQL being executed was: INSERT INTO `documents` (`name`, `text`) VALUES ('asdasd', 'asdasdasd') in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `do...')
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('documents', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(35): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'owner_id' doesn't have a default value
+)
+
+2016-04-28 23:59:56 [127.0.0.1][-][-][info][application] $_POST = [
+    '_csrf' => 'UGR0TDg3eEllKj57T2cBE2APBiVTRx85Ix4ZPHd1GQwbEh4rdGUTLw=='
+    'Documents' => [
+        'name' => 'asdasd'
+        'text' => 'asdasdasd'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '123'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.back'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.back/documents/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25603'
+    'REDIRECT_URL' => '/documents/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461877196.312
+    'REQUEST_TIME' => 1461877196
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 00:01:52 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'owner_id' doesn't have a default value in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php:784
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(784): PDOStatement->execute()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('documents', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(37): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'owner_id' doesn't have a default value
+The SQL being executed was: INSERT INTO `documents` (`name`, `text`) VALUES ('asdasd', 'asdasdasd') in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `do...')
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('documents', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(37): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'owner_id' doesn't have a default value
+)
+
+2016-04-29 00:01:52 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_POST = [
+    '_csrf' => 'RFhpOGQ1cWZxFiMPE2UIPHQzG1EPRRYWNyIESCt3ECMPLgNfKGcaAA=='
+    'Documents' => [
+        'name' => 'asdasd'
+        'text' => 'asdasdasd'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '123'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.back'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.back/documents/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25623'
+    'REDIRECT_URL' => '/documents/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461877312.332
+    'REQUEST_TIME' => 1461877312
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 00:02:03 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'owner_id' doesn't have a default value in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php:784
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(784): PDOStatement->execute()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('documents', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(37): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'owner_id' doesn't have a default value
+The SQL being executed was: INSERT INTO `documents` (`name`, `text`) VALUES ('qweqwe', 'qweqwe') in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `do...')
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\Schema.php(448): yii\db\Command->execute()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(457): yii\db\Schema->insert('documents', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\ActiveRecord.php(427): yii\db\ActiveRecord->insertInternal(NULL)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\db\BaseActiveRecord.php(593): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(37): yii\db\BaseActiveRecord->save()
+#6 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'owner_id' doesn't have a default value
+)
+
+2016-04-29 00:02:03 [127.0.0.1][1][s9i0dbebi5eua9fp0297ju9f81][info][application] $_POST = [
+    '_csrf' => 'U1lra0lzeXJmFyFcPiMAKGMyGQIiAx4CICMGGwYxGDcYLwEMBSESFA=='
+    'Documents' => [
+        'name' => 'qweqwe'
+        'text' => 'qweqwe'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/'
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '120'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://diploma.back'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://diploma.back/documents/create'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25632'
+    'REDIRECT_URL' => '/documents/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461877323.14
+    'REQUEST_TIME' => 1461877323
+    'argv' => []
+    'argc' => 0
+]
+2016-04-29 00:14:33 [127.0.0.1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: yii\bootstrap\ActiveField::style in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Component.php:197
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(521): yii\base\Component->__set('style', 'display: hidden')
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Object.php(105): yii\BaseYii::configure(Object(yii\bootstrap\ActiveField), Array)
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-bootstrap\ActiveField.php(155): yii\base\Object->__construct(Array)
+#3 [internal function]: yii\bootstrap\ActiveField->__construct(Array)
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(374): ReflectionClass->newInstanceArgs(Array)
+#5 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\di\Container.php(153): yii\di\Container->build('yii\\bootstrap\\A...', Array, Array)
+#6 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\bootstrap\\A...', Array, Array)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\widgets\ActiveForm.php(287): yii\BaseYii::createObject(Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2-bootstrap\ActiveForm.php(107): yii\widgets\ActiveForm->field(Object(common\models\Documents), 'owner_id', Array)
+#9 C:\OpenServer\domains\diploma\backend\views\documents\create.php(15): yii\bootstrap\ActiveForm->field(Object(common\models\Documents), 'owner_id', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#12 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(backend\controllers\DocumentsController))
+#13 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('create', Array, Object(backend\controllers\DocumentsController))
+#14 C:\OpenServer\domains\diploma\backend\controllers\DocumentsController.php(40): yii\base\Controller->render('create', Array)
+#15 [internal function]: backend\controllers\DocumentsController->actionCreate()
+#16 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#17 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#18 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('create', Array)
+#19 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('documents/creat...', Array)
+#20 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\OpenServer\domains\diploma\backend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+2016-04-29 00:14:33 [127.0.0.1][-][-][info][application] $_COOKIE = [
+    '_csrf' => 'c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"5NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf\";}'
+    'PHPSESSID' => 's9i0dbebi5eua9fp0297ju9f81'
+    '_identity' => '01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[1,\"KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e\",2592000]\";}'
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.back'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36'
+    'HTTP_REFERER' => 'http://diploma.back/documents/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=c2c9137a6c76e599f8b3cc29fd5dac0d69357101b1f920eeee6f70cc0472e882a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%225NJ7wPyZ0krikpgpszmpOBaEKvjgLRkf%22%3B%7D; PHPSESSID=s9i0dbebi5eua9fp0297ju9f81; _identity=01556cd46addd1c024c01525a06760ee3a3884c328c78934f5ae3e0c87a37d68a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22KtzuYg4O8wNC4SJXxcPuKUxpW0yhvs3e%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\bin;c:\\openserver\\modules\\database\\PostgreSQL-9.5-x64\\lib;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.back'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/backend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/backend/web/index.php'
+    'REMOTE_PORT' => '25825'
+    'REDIRECT_URL' => '/documents/create'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/documents/create'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1461878073.294
+    'REQUEST_TIME' => 1461878073
+    'argv' => []
+    'argc' => 0
+]

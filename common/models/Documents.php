@@ -10,6 +10,9 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $text
+ * @property integer $owner_id
+ *
+ * @property User $owner
  */
 class Documents extends \yii\db\ActiveRecord
 {
@@ -27,10 +30,11 @@ class Documents extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            ['name', 'filter', 'filter' => 'trim'],
-            [['name', 'text'], 'required'],
-            [['text'], 'string', 'min' => '1'],
+            [['name', 'text', 'owner_id'], 'required'],
+            [['text'], 'string'],
+            [['owner_id'], 'integer'],
             [['name'], 'string', 'max' => 255],
+            [['owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['owner_id' => 'id']],
         ];
     }
 
@@ -41,9 +45,22 @@ class Documents extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Название лекции',
-            'text' => 'Содержимое лекции',
+            'name' => 'Назва лекії',
+            'text' => 'Зміст лекції',
+            'owner_id' => 'ID Викладача',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOwner()
+    {
+        return $this->hasOne(User::className(), ['id' => 'owner_id']);
+    }
+
+    public static function getOwnerNameByID($id) {
+        return User::find()->select('name')->where(['id' => $id])->asArray()->one();
     }
 
 }
