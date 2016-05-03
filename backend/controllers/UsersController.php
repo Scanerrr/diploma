@@ -51,7 +51,7 @@ class UsersController extends Controller
             ->all();
 
 
-        for($i = 0; $i < count($users);$i++) {
+        for ($i = 0; $i < count($users); $i++) {
             $role_id = intval($users[$i]['role']) - 1;
 
             $users[$i]['role_name'] = $roles[$role_id]['name'];
@@ -65,13 +65,16 @@ class UsersController extends Controller
         ]);
     }
 
-    public function actionChangerole() {
-        if(Yii::$app->request->isAjax) {
+    public function actionChangerole()
+    {
+        if (Yii::$app->request->isAjax) {
+            $userID = Yii::$app->request->post('userID');
             $roleID = Yii::$app->request->post('roleID');
-            $current_user = User::find()->where(['id' => Yii::$app->user->id])->one();
+            $current_user = User::find()->where(['id' => $userID])->one();
             $current_user->role = $roleID;
-            $current_user->save(false);
-            return json_encode($current_user);
+            if($current_user->update(false)) {
+                return "changed id: $userID";
+            }
         } else {
             throw new NotFoundHttpException();
         }
