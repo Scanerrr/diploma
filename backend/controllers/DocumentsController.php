@@ -15,7 +15,10 @@ class DocumentsController extends Controller
         $documentPerPage = 5;
         $paginator = new Pagination(['totalCount' => $count, 'pageSize' => $documentPerPage]);
 
-        $documents = Documents::find()->select(['id', 'name'])->offset($paginator->offset)
+        $documents = Documents::find()
+            ->select(['documents.id', 'documents.name', 'user.name AS user'])
+            ->innerJoin('user', 'user.id = owner_id')
+            ->offset($paginator->offset)
             ->limit($paginator->limit)
             ->asArray()
             ->all();
@@ -39,6 +42,19 @@ class DocumentsController extends Controller
         return $this->render('create', [
             'model' => $model
         ]);
+    }
+
+
+    public function actionGetprev() {
+        $curID = intval(Yii::$app->request->get('id'));
+        $neededID = Documents::getPrev($curID);
+        $this->redirect('/documents/show?id=' .$neededID);
+    }
+
+    public function actionGetnext() {
+        $curID = intval(Yii::$app->request->get('id'));
+        $neededID = Documents::getNext($curID);
+        $this->redirect('/documents/show?id=' .$neededID);
     }
 
     public function actionShow()

@@ -3,15 +3,13 @@ use yii\helpers\Html;
 ?>
 <div class="container">
     <div class="row">
-        <div class="col-sm-3">
-            <a data-toggle="modal" style="margin: 20px 0;" data-target=".bs-example-modal-sm" class="btn btn-danger">Видалити
+        <div class="col-sm-3" style="margin: 20px 0;">
+            <a data-toggle="modal" data-target=".w-modal-sm" class="btn btn-danger">Видалити
                 поточну лекцію</a>
         </div>
-        <div class="col-sm-9">
-            <div>
-                <ul class="pagination" id="pagination">
-                </ul>
-            </div>
+        <div class="col-sm-9" style="margin: 20px 0;">
+            <a id="prev" class="btn btn-default" href="/documents/getprev?id=<?= $document['id'] ?>"><div class="glyphicon glyphicon-chevron-left"></div></a>
+            <a id="next" class="btn btn-default" href="/documents/getnext?id=<?= $document['id'] ?>"><div class="glyphicon glyphicon-chevron-right"></div></a>
         </div>
     </div>
     <div class="row">
@@ -24,7 +22,7 @@ use yii\helpers\Html;
 
         <p><?= HTML::encode($document['text']) ?></p>
 
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal fade w-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-header">

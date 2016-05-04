@@ -63,4 +63,12 @@ class Documents extends \yii\db\ActiveRecord
         return User::find()->select('name')->where(['id' => $id])->asArray()->one();
     }
 
+    public static function getNext($id) {
+        return Documents::find()->where('id > ' . $id)->min('id');
+    }
+
+    public static function getPrev($id) {
+        return Documents::find()->where('id < ' . $id)->max('id');
+    }
+
 }

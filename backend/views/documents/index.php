@@ -2,10 +2,10 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 use yii\widgets\LinkPager;
-?>
-<h1>Документы</h1>
 
-<a href="/documents/create" class="btn btn-info">Создать новую лекцию</a>
+?>
+<h1>Документи</h1>
+<a href="/documents/create" class="btn btn-info">Створити нову лекцію</a>
 <br>
 <?= LinkPager::widget([
     'pagination' => $pages,
@@ -14,15 +14,16 @@ use yii\widgets\LinkPager;
 <table class="table">
     <thead>
     <tr>
-        <td width="10%">#</td>
-        <td>Название лекции</td>
+        <td>Назва лекції</td>
+        <td>Ім'я викладача</td>
+        <td>Назва предмета</td>
     </tr>
     </thead>
     <tbody>
     <?php foreach ($documents as $document) { ?>
         <tr>
-            <td><?= $document['id'] ?></td>
             <td><a href="/documents/show?id=<?= $document['id'] ?>"><?= HTML::encode($document['name']) ?></a></td>
+            <td><?= HTML::encode($document['user']) ?></td>
         </tr>
     <?php } ?>
     </tbody>

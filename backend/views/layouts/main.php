@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use backend\assets\AppAsset;
+use common\models\User;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use common\widgets\NavBarCustom;
@@ -61,12 +62,14 @@ AppAsset::register($this);
                 <?php
 
                 $menuItems = [];
-                if($user_role === 1) {
+                //if user is admin
+                if($user_role === User::ROLE_ADMIN) {
                     $menuItems = [
-                        ['label' => 'Пользователи', 'url' => '/users/'],
+                        ['label' => 'Користувачі', 'url' => '/users/'],
                     ];
                 }
-                $menuItems[] = ['label' => 'Документы', 'url' => '/documents/'];
+                $menuItems[] = ['label' => 'Документи', 'url' => '/documents/'];
+                $menuItems[] = ['label' => 'Предмети', 'url' => '/subjects/'];
                 echo Nav::widget([
                     'options' => ['class' => ''],
                     'items' => $menuItems,
