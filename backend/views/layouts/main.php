@@ -66,10 +66,10 @@ AppAsset::register($this);
                 if($user_role === User::ROLE_ADMIN) {
                     $menuItems = [
                         ['label' => 'Користувачі', 'url' => '/users/'],
+                        ['label' => 'Предмети', 'url' => '/subjects/']
                     ];
                 }
                 $menuItems[] = ['label' => 'Документи', 'url' => '/documents/'];
-                $menuItems[] = ['label' => 'Предмети', 'url' => '/subjects/'];
                 echo Nav::widget([
                     'options' => ['class' => ''],
                     'items' => $menuItems,

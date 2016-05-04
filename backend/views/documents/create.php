@@ -17,6 +17,9 @@
         <?= $form
             ->field($model, 'owner_id', ['template' => '{input}'])
             ->hiddenInput(['value' => Yii::$app->user->id]); ?>
+        <?= $form
+            ->field($model, 'subject_id', ['template' => '{label}{input}{error}'])
+            ->dropDownList($subjects); ?>
         <button type="submit" class="btn btn-default">Создать</button>
         <?php $form->end(); ?>
     </div>

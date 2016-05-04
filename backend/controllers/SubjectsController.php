@@ -58,7 +58,7 @@ class SubjectsController extends Controller
         $model = new Subjects();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect('/subjects/');
         } else {
             return $this->render('create', [
                 'model' => $model,

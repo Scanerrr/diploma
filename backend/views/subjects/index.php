@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Додати предмет', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?php Pjax::begin(); ?>
+    <?php if($dataProvider->getCount() > 0) { ?>
     <table class="table">
         <thead>
         <tr>
@@ -30,6 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= ListView::widget([
             'dataProvider' => $dataProvider,
             'summary' => '',
+            'showOnEmpty' => false,
             'itemOptions' => ['class' => 'item'],
             'itemView' => function ($model, $key, $index, $widget) {
                 return '<tr>
@@ -44,5 +46,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
         </tbody>
     </table>
-
+<?php } else echo '<h5>Нічого не знайдено.</h5>' ?>
     <?php Pjax::end(); ?></div>

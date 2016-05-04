@@ -11,8 +11,10 @@ use Yii;
  * @property string $name
  * @property string $text
  * @property integer $owner_id
+ * @property integer $subject_id
  *
  * @property User $owner
+ * @property Subjects $subject
  */
 class Documents extends \yii\db\ActiveRecord
 {
@@ -30,11 +32,13 @@ class Documents extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'text', 'owner_id'], 'required'],
+            [['name', 'text', 'owner_id', 'subject_id'], 'required', 'message' => 'Поле не може бути порожнім'],
             [['text'], 'string'],
             [['owner_id'], 'integer'],
+            [['subject_id'], 'integer'],
             [['name'], 'string', 'max' => 255],
             [['owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['owner_id' => 'id']],
+            [['subject_id'], 'exist', 'skipOnError' => true, 'targetClass' => Subjects::className(), 'targetAttribute' => ['subject_id' => 'id']],
         ];
     }
 
@@ -47,7 +51,8 @@ class Documents extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Назва лекії',
             'text' => 'Зміст лекції',
-            'owner_id' => 'ID Викладача',
+            'owner_id' => "Ім'я викладача",
+            'subject_id' => 'Назва предмету',
         ];
     }
 
@@ -57,6 +62,14 @@ class Documents extends \yii\db\ActiveRecord
     public function getOwner()
     {
         return $this->hasOne(User::className(), ['id' => 'owner_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSubject()
+    {
+        return $this->hasOne(Subjects::className(), ['id' => 'subject_id']);
     }
 
     public static function getOwnerNameByID($id) {

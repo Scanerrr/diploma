@@ -24,6 +24,7 @@ use yii\widgets\LinkPager;
         <tr>
             <td><a href="/documents/show?id=<?= $document['id'] ?>"><?= HTML::encode($document['name']) ?></a></td>
             <td><?= HTML::encode($document['user']) ?></td>
+            <td><?= HTML::encode($document['subject']) ?></td>
         </tr>
     <?php } ?>
     </tbody>
