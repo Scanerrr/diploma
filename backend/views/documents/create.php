@@ -1,3 +1,20 @@
+<?php $this->registerJsFile('/js/editor/tinymce.min.js', [
+    'position' => \yii\web\View::POS_HEAD
+]); ?>
+<script>
+    tinymce.init({
+        height: 500,
+        selector: 'textarea',
+        language: 'uk_UA',
+        statusbar: false,
+        plugins: [
+            "advlist autolink lists link image charmap print preview anchor",
+            "searchreplace visualblocks code fullscreen",
+            "insertdatetime media table contextmenu paste jbimages"
+        ],
+        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages"
+    })
+</script>
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#users" aria-controls="home" role="tab" data-toggle="tab">Создать
             вручную</a>
@@ -9,7 +26,7 @@
 <!-- Tab panes -->
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="users">
-        <?php $form = \yii\bootstrap\ActiveForm::begin([]); ?>
+        <?php $form = \yii\bootstrap\ActiveForm::begin(['enableClientValidation' => false]); ?>
         <?= $form
             ->field($model, 'name')->textInput(); ?>
         <?= $form

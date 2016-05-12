@@ -25,7 +25,7 @@ use yii\helpers\Html;
 <div class="row">
     <h3>Тема лекції: <span style="text-decoration: underline;"><?= HTML::encode($document['name']) ?></span></h3>
 
-    <p style="padding-right:10px; text-align: justify;"><?= HTML::encode($document['text']) ?></p>
+    <div class="document-text"><?= $document['text'] ?></div>
 
     <div class="modal fade w-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm">

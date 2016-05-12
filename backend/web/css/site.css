@@ -107,3 +107,19 @@ a.desc:after {
 thead {
     font-weight: bold;
 }
+
+.document-text {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgba(85, 85, 85, 0.15);
+    overflow: hidden;
+}
+
+.document-text table {
+    border-collapse: collapse;
+}
+
+.document-text table th,
+.document-text table td {
+    border: 1px solid #000;
+}
