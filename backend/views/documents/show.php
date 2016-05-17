@@ -36,7 +36,7 @@ use yii\helpers\Html;
                     <h4 class="modal-title" id="myModalLabel">Ви впевнені, що хочете видалити поточну лекцію?</h4>
                 </div>
                 <div class="modal-footer">
-                    <a href="/documents/remove?id=<?= $document['id'] ?>" class="btn btn-danger">Видалити</a>
+                    <a href="/documents/delete?id=<?= $document['id'] ?>" class="btn btn-danger">Видалити</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Відмінити</button>
                 </div>
             </div>

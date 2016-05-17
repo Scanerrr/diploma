@@ -3,8 +3,10 @@
 namespace backend\controllers;
 
 use common\models\Documents;
+use common\models\DocumentsSearch;
 use common\models\Subjects;
 use Yii;
+use yii\data\ActiveDataProvider;
 use yii\data\Pagination;
 use yii\web\Controller;
 
@@ -12,22 +14,12 @@ class DocumentsController extends Controller
 {
     public function actionIndex()
     {
-        $count = Documents::find()->count();
-        $documentPerPage = 5;
-        $paginator = new Pagination(['totalCount' => $count, 'pageSize' => $documentPerPage]);
-
-        $documents = Documents::find()
-            ->select(['documents.id', 'documents.name', 'user.name AS user', 'subjects.name AS subject'])
-            ->innerJoin('user', 'user.id = owner_id')
-            ->innerJoin('subjects', 'subjects.id = subject_id')
-            ->offset($paginator->offset)
-            ->limit($paginator->limit)
-            ->asArray()
-            ->all();
+        $searchModel = new DocumentsSearch();
+        $provider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'documents' => $documents,
-            'pages' => $paginator
+            'provider' => $provider,
+            'searchModel' => $searchModel
         ]);
     }
 
@@ -58,17 +50,17 @@ class DocumentsController extends Controller
     {
         $curID = intval(Yii::$app->request->get('id'));
         $neededID = Documents::getPrev($curID);
-        $this->redirect('/documents/show?id=' . $neededID);
+        $this->redirect('/documents/view?id=' . $neededID);
     }
 
     public function actionGetnext()
     {
         $curID = intval(Yii::$app->request->get('id'));
         $neededID = Documents::getNext($curID);
-        $this->redirect('/documents/show?id=' . $neededID);
+        $this->redirect('/documents/view?id=' . $neededID);
     }
 
-    public function actionShow()
+    public function actionView()
     {
         //grab current document by page id
         $documentID = Yii::$app->request->get('id');
@@ -92,7 +84,7 @@ class DocumentsController extends Controller
         }
     }
 
-    public function actionRemove()
+    public function actionDelete()
     {
         $documentID = Yii::$app->request->get('id');
         $documentID = intval($documentID);

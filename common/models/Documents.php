@@ -3,6 +3,7 @@
 namespace common\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "documents".
@@ -16,7 +17,7 @@ use Yii;
  * @property User $owner
  * @property Subjects $subject
  */
-class Documents extends \yii\db\ActiveRecord
+class Documents extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -59,7 +60,7 @@ class Documents extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getOwner()
+    public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'owner_id']);
     }
@@ -67,7 +68,7 @@ class Documents extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getSubject()
+    public function getSubjects()
     {
         return $this->hasOne(Subjects::className(), ['id' => 'subject_id']);
     }
