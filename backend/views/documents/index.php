@@ -14,7 +14,7 @@ $this->title = "Документи";
             'dataProvider' => $provider,
             'filterModel' => $searchModel,
             'summary' => '<br>',
-            'showOnEmpty' => false,
+            'emptyText' => 'По даному запиту нічого не знайдено',
             'columns' => [
                 [
                     'label' => 'Назва документу',

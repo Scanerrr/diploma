@@ -11,7 +11,7 @@ use yii\data\ActiveDataProvider;
 use yii\data\Pagination;
 use yii\web\Controller;
 
-class DocumentsController extends Controller
+class DocumentsController extends DefaultController
 {
     public function actionIndex()
     {

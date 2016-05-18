@@ -10,7 +10,7 @@ use yii\filters\AccessControl;
 use \yii\web\Controller;
 use yii\web\NotFoundHttpException;
 
-class UsersController extends Controller
+class UsersController extends DefaultController
 {
     public function behaviors()
     {
