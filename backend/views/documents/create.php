@@ -26,18 +26,36 @@
 <!-- Tab panes -->
 <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="users">
-        <?php $form = \yii\bootstrap\ActiveForm::begin(['enableClientValidation' => false]); ?>
-        <?= $form
-            ->field($model, 'name')->textInput(); ?>
-        <?= $form
-            ->field($model, 'text')->textarea(); ?>
-        <?= $form
-            ->field($model, 'owner_id', ['template' => '{input}'])
-            ->hiddenInput(['value' => Yii::$app->user->id]); ?>
-        <?= $form
-            ->field($model, 'subject_id', ['template' => '{label}{input}{error}'])
-            ->dropDownList($subjects); ?>
-        <button type="submit" class="btn btn-default">Создать</button>
+        <div class="row">
+            <?php $form = \yii\bootstrap\ActiveForm::begin(['enableClientValidation' => false]); ?>
+
+            <div class="col-sm-12">
+                <?= $form
+                    ->field($model, 'name')->textInput(['maxlength' => 65]); ?>
+            </div>
+            <div class="col-sm-6">
+                <?= $form
+                    ->field($model, 'subject_id', ['template' => '{label}{input}{error}'])
+                    ->dropDownList($subjects); ?>
+            </div>
+            <div class="col-sm-6">
+                <?= $form
+                    ->field($model, 'type_id', ['template' => '{label}{input}{error}'])
+                    ->dropDownList($types); ?>
+            </div>
+            <div class="col-sm-12">
+                <?= $form
+                    ->field($model, 'text')->textarea(); ?>
+            </div>
+
+            <?= $form
+                ->field($model, 'owner_id', ['template' => '{input}'])
+                ->hiddenInput(['value' => Yii::$app->user->id]); ?>
+
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-default">Создать</button>
+            </div>
+        </div>
         <?php $form->end(); ?>
     </div>
     <div role="tabpanel" class="tab-pane" id="roles">

@@ -18,15 +18,18 @@ use yii\helpers\Html;
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-6 bold"><strong>Iм`я викладача: </strong><span
+    <div class="col-sm-4"><strong>Iм`я викладача: </strong><span
             style="text-decoration: underline;"><?= Html::encode($document['user']); ?></span></div>
-    <div class="col-sm-6"><strong>Назва предмету:</strong> <?= Html::encode($document['subject']); ?></div>
+    <div class="col-sm-4"><span><strong>Назва предмету:</strong> <?= Html::encode($document['subject']); ?></span></div>
+    <div class="col-sm-4"><strong>Тип документу:</strong> <?= Html::encode($document['type']); ?></div>
 </div>
 <div class="row">
-    <h3>Тема лекції: <span style="text-decoration: underline;"><?= HTML::encode($document['name']) ?></span></h3>
-
-    <div class="document-text"><?= $document['text'] ?></div>
-
+    <div class="col-sm-12"><h3>Тема лекції: <span
+                style="word-wrap: break-word;text-decoration: underline;"><?= HTML::encode($document['name']) ?></span>
+        </h3></div>
+    <div class="col-sm-12">
+        <div class="document-text"><?= $document['text'] ?></div>
+    </div>
     <div class="modal fade w-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">

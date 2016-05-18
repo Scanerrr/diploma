@@ -4,6 +4,7 @@ namespace backend\controllers;
 
 use common\models\Documents;
 use common\models\DocumentsSearch;
+use common\models\DocumentTypes;
 use common\models\Subjects;
 use Yii;
 use yii\data\ActiveDataProvider;
@@ -39,9 +40,17 @@ class DocumentsController extends Controller
             $subjects[$d['id']] = $d['name'];
         }
 
+        $data = DocumentTypes::find()->asArray()->all();
+
+        $types = [];
+        foreach ($data as $d) {
+            $types[$d['id']] = $d['name'];
+        }
+
         return $this->render('create', [
             'model' => $model,
-            'subjects' => $subjects
+            'subjects' => $subjects,
+            'types' => $types
         ]);
     }
 
@@ -67,9 +76,10 @@ class DocumentsController extends Controller
         $documentID = intval($documentID);
 
         $document = Documents::find()
-            ->select('documents.id, documents.name, documents.text, subjects.name AS subject, user.name AS user')
+            ->select('documents.id, documents.name, documents.text, document_types.name AS type, subjects.name AS subject, user.name AS user')
             ->innerJoin('subjects', 'subjects.id = subject_id')
             ->innerJoin('user', 'user.id = owner_id')
+            ->innerJoin('document_types', 'type_id = document_types.id')
             ->where(['documents.id' => $documentID])
             ->asArray()
             ->one();

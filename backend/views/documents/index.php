@@ -17,24 +17,22 @@ $this->title = "Документи";
             'showOnEmpty' => false,
             'columns' => [
                 [
+                    'label' => 'Назва документу',
                     'attribute' => 'name',
-                    'filter' => Html::input('text', 'DocumentSearch[name]'),
                     'value' => function ($model) {
                         return substr($model->name, 0, 50);
                     },
                 ],
                 [
                     'label' => "Ім'я користувача",
-                    'attribute' => "user.name",
-                    'filter' => Html::input('text', 'DocumentSearch[user.name]'),
+                    'attribute' => "username",
                     'value' => function ($model) {
                         return substr($model->user->name, 0, 50);
                     },
                 ],
                 [
                     'label' => 'Назва предмету',
-                    'attribute' => "subjects.name",
-                    'filter' => Html::input('text', 'DocumentSearch[subjects.name]'),
+                    'attribute' => "subject_name",
                     'value' => function ($model) {
                         return substr($model->subjects->name, 0, 50);
                     },

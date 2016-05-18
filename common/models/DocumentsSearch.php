@@ -13,7 +13,7 @@ class DocumentsSearch extends Documents
     public function rules()
     {
         return [
-            [['username', 'subject_name'], 'safe']
+            [['name', 'username', 'subject_name'], 'safe']
         ];
     }
 
@@ -29,12 +29,12 @@ class DocumentsSearch extends Documents
             ],
         ]);
 
-        $dataProvider->sort->attributes['user.name'] = [
+        $dataProvider->sort->attributes['username'] = [
             'asc' => ['user.name' => SORT_ASC],
             'desc' => ['user.name' => SORT_DESC],
         ];
 
-        $dataProvider->sort->attributes['subjects.name'] = [
+        $dataProvider->sort->attributes['subject_name'] = [
             'asc' => ['subjects.name' => SORT_ASC],
             'desc' => ['subjects.name' => SORT_DESC],
         ];
@@ -45,7 +45,7 @@ class DocumentsSearch extends Documents
         }
 
 
-        $query->andWhere('user.name LIKE "%' . $this->name . '%" ');
+        $query->andWhere('documents.name LIKE "%' . $this->name . '%" ');
 
         $query->andWhere('user.name LIKE "%' . $this->username . '%" ');
 
