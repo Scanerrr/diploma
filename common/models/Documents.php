@@ -74,7 +74,7 @@ class Documents extends ActiveRecord
         return $this->hasOne(Subjects::className(), ['id' => 'subject_id']);
     }
 
-    public function getType()
+    public function getDocument_types()
     {
         return $this->hasOne(DocumentTypes::className(), ['id' => 'type_id']);
     }

@@ -1,6 +1,9 @@
 <?php
 /* @var $this yii\web\View */
+use common\models\DocumentTypes;
+use common\models\Subjects;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 $this->title = "Документи";
@@ -20,22 +23,34 @@ $this->title = "Документи";
                     'label' => 'Назва документу',
                     'attribute' => 'name',
                     'value' => function ($model) {
-                        return substr($model->name, 0, 50);
+                        if(strlen($model->name) > 35) {
+                            return substr($model->name, 0, 35) . '...';
+                        }
+                        return substr($model->name, 0, 35);
                     },
                 ],
                 [
                     'label' => "Ім'я користувача",
                     'attribute' => "username",
                     'value' => function ($model) {
-                        return substr($model->user->name, 0, 50);
+                        return substr($model->user->name, 0, 35);
                     },
                 ],
                 [
                     'label' => 'Назва предмету',
                     'attribute' => "subject_name",
+                    'filter' => Html::activeDropDownList($searchModel, 'subject_name', ArrayHelper::map(Subjects::find()->asArray()->all(), 'name', 'name'),['class'=>'form-control', 'prompt' => 'Всі предмети']),
                     'value' => function ($model) {
-                        return substr($model->subjects->name, 0, 50);
+                        return substr($model->subjects->name, 0, 35);
                     },
+                ],
+                [
+                    'label' => 'Тип документу',
+                    'attribute' => 'document_type',
+                    'filter' => Html::activeDropDownList($searchModel, 'document_type', ArrayHelper::map(DocumentTypes::find()->asArray()->all(), 'name', 'name'),['class'=>'form-control', 'prompt' => 'Всі типи']),
+                    'value' => function ($model) {
+                        return substr($model->document_types->name, 0, 35);
+                    }
                 ],
                 [
                     'class' => 'yii\grid\ActionColumn',
