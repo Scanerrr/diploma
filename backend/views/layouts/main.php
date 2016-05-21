@@ -33,6 +33,9 @@ AppAsset::register($this);
         'options' => [
             'class' => 'navbar-inverse',
         ],
+        'innerContainerOptions' => [
+            'class' => 'container-fluid'
+        ]
     ]);
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
