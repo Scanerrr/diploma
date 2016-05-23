@@ -1,4 +1,7 @@
-<?php $this->registerJsFile('/js/editor/tinymce.min.js', [
+<?php use common\widgets\Alert;
+use yii\widgets\ActiveForm;
+
+$this->registerJsFile('/js/editor/tinymce.min.js', [
     'position' => \yii\web\View::POS_HEAD
 ]); ?>
 <script>
@@ -25,9 +28,10 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
+    <?= Alert::widget() ?>
     <div role="tabpanel" class="tab-pane active" id="users">
         <div class="row">
-            <?php $form = \yii\bootstrap\ActiveForm::begin(['enableClientValidation' => false]); ?>
+            <?php $form = ActiveForm::begin(['enableClientValidation' => false]); ?>
 
             <div class="col-sm-12">
                 <?= $form
@@ -59,13 +63,12 @@
         <?php $form->end(); ?>
     </div>
     <div role="tabpanel" class="tab-pane" id="roles">
-        <form action="../fromfile" method="post">
+        <?php $form = ActiveForm::Begin(['action' => '/documents/fromfile', 'options' => ['enctype' => 'multipart/form-data']]) ?>
             <div class="form-group">
-                <label for="exampleInputFile">Загрузить файл</label>
-                <input type="file" name="file">
+                <?= $form->field($file_model, 'file')->fileInput(); ?>
                 <p class="help-block"></p>
             </div>
             <button type="submit" class="btn btn-default">Загрузить</button>
-        </form>
+        <?php $form->end(); ?>
     </div>
 </div>

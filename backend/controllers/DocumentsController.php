@@ -6,10 +6,9 @@ use common\models\Documents;
 use common\models\DocumentsSearch;
 use common\models\DocumentTypes;
 use common\models\Subjects;
+use common\models\UploadFile;
 use Yii;
-use yii\data\ActiveDataProvider;
-use yii\data\Pagination;
-use yii\web\Controller;
+use yii\web\UploadedFile;
 
 class DocumentsController extends DefaultController
 {
@@ -24,9 +23,29 @@ class DocumentsController extends DefaultController
         ]);
     }
 
+    public function actionFromfile()
+    {
+        $model = new UploadFile();
+
+        if (Yii::$app->request->isPost) {
+            //get the file
+            $model->file = UploadedFile::getInstance($model, 'file');
+
+            if (!empty($model->file)) {
+                $string = $model->upload();
+                return $string;
+            }
+
+            Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
+            return $this->redirect('/documents/create');
+        }
+        return $this->redirect('/documents/create');
+    }
+
     public function actionCreate()
     {
         $model = new Documents();
+        $file_model = new UploadFile();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $model->save();
@@ -50,7 +69,8 @@ class DocumentsController extends DefaultController
         return $this->render('create', [
             'model' => $model,
             'subjects' => $subjects,
-            'types' => $types
+            'types' => $types,
+            'file_model' => $file_model
         ]);
     }
 
