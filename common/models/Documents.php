@@ -16,6 +16,8 @@ use yii\db\ActiveRecord;
  *
  * @property User $owner
  * @property Subjects $subject
+ * @property integer $type_id
+ * @property DocumentTypes $type
  */
 class Documents extends ActiveRecord
 {
@@ -50,8 +52,8 @@ class Documents extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Назва лекії',
-            'text' => 'Зміст лекції',
+            'name' => 'Тема',
+            'text' => 'Зміст',
             'owner_id' => "Ім'я викладача",
             'subject_id' => 'Назва предмету',
             'type_id' => 'Тип документу'

@@ -32,12 +32,13 @@ class DocumentsController extends DefaultController
             $model->file = UploadedFile::getInstance($model, 'file');
 
             if (!empty($model->file)) {
-                $string = $model->upload();
-                return $string;
+                $id = $model->upload();
+                if (!empty($id)) {
+                    return $this->redirect('/documents/view?id=' . $id);
+                }
             }
 
             Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
-            return $this->redirect('/documents/create');
         }
         return $this->redirect('/documents/create');
     }

@@ -8,6 +8,8 @@ use yii\base\Model;
 class UploadFile extends Model
 {
     public $file;
+    private $file_content;
+    private $pictures = [];
 
     private $filePath;
 
@@ -31,11 +33,23 @@ class UploadFile extends Model
         $this->filePath = Yii::$app->basePath . '/web/uploads/' . $name . '.' . $this->file->extension;
         $this->file->saveAs($this->filePath);
 
-        $file_content = $this->parseDocx();
+        try {
+            $this->parseDocx();
+            $this->getImages();
+            $this->setImages();
+        } catch (\Exception $e) {
+            throw new \Exception($e->getMessage());
+        } finally {
+            $this->remove();
+        }
 
-        $this->remove();
+        if ($this->saveDocument()) {
+            $id = Yii::$app->getDb()->lastInsertID;
+            return $id;
+        } else {
+            return false;
+        }
 
-        return $file_content;
     }
 
     private function remove()
@@ -45,8 +59,7 @@ class UploadFile extends Model
 
     private function parseDocx()
     {
-        $content = '';
-        $text = '';
+        $xml = '';
 
         $zip = zip_open($this->filePath);
 
@@ -58,17 +71,104 @@ class UploadFile extends Model
 
             if (zip_entry_name($zip_entry) != "word/document.xml") continue;
 
-            $content .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
+            $xml .= zip_entry_read($zip_entry, zip_entry_filesize($zip_entry));
 
             zip_entry_close($zip_entry);
         }// end while
 
         zip_close($zip);
 
-        $content = str_replace('</w:r></w:p></w:tc><w:tc>', " ", $content);
-        $content = str_replace('</w:r></w:p>', "\r\n", $content);
-        $striped_content = strip_tags($content);
 
-        return $content;
+        $dom = new \DOMDocument();
+        $dom->loadXML($xml);
+
+
+        $elements = $dom->getElementsByTagName('pict');
+
+        if ($elements->length > 0) {
+            for ($i = 0; $i < $elements->length; $i++) {
+                $elements->item($i)->textContent = "[~$i~]";
+            }
+        }
+
+        $xml = $dom->saveXML();
+
+        $xml = str_replace('</w:r></w:p></w:tc><w:tc>', " ", $xml);
+        $xml = str_replace('</w:r></w:p>', "\r\n", $xml);
+
+        $striped_content = strip_tags($xml);
+
+
+        return $this->file_content = $striped_content;
     }
+
+    private function getImages()
+    {
+        /*Create a new ZIP archive object*/
+        $zip = new \ZipArchive;
+        $pictures = [];
+        /*Open the received archive file*/
+        if (true === $zip->open($this->filePath)) {
+            for ($i = 0; $i < $zip->numFiles; $i++) {
+
+
+                /*Loop via all the files to check for image files*/
+                $zip_element = $zip->statIndex($i);
+
+
+                /*Check for images*/
+                if (preg_match("([^\s]+(\.(?i)(jpg|jpeg|png|gif|bmp))$)", $zip_element['name'], $pictures)) {
+                    //found current picture
+                    $extension = $pictures[2];
+                    $filename = Yii::$app->security->generateRandomString();
+                    $fp = fopen('uploads/' . $filename . '.' . $extension, 'w');
+                    fwrite($fp, $zip->getFromIndex($i));
+                    fclose($fp);
+
+                    $this->pictures[] = '../uploads/' . $filename . '.' . $extension;
+                }
+
+            }
+        }
+        return true;
+    }
+
+    private function setImages()
+    {
+        for ($i = 0; $i <= count($this->pictures); $i++) {
+            $pattern = "(\[~$i~\])";
+            $tag = "<p><img src='" . $this->pictures[$i] . "' /></p>";
+            $this->file_content = preg_replace($pattern, $tag, $this->file_content);
+        }
+
+        return $this->file_content;
+
+    }
+
+    private function saveDocument()
+    {
+        $array = [];
+        $pattern = '({{(.+)}})';
+        preg_match($pattern, $this->file_content, $array);
+        $title = $array[1];
+        $this->file_content = preg_replace($pattern, '', $this->file_content);
+
+        $document = new Documents();
+
+        $document->name = $title;
+        $document->text = $this->file_content;
+        $document->owner_id = intval(Yii::$app->user->getId());
+        $document->subject_id = Subjects::find()->select('id')->min('id');
+        $document->type_id = 1;
+        if ($document->save(false)) {
+            Yii::trace('DOCUMENT SAVED');
+
+            return true;
+        } else {
+            Yii::trace($document->errors);
+            return false;
+        }
+
+    }
+
 }
