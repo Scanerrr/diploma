@@ -1,4 +1,6 @@
 <?php use common\widgets\Alert;
+use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 $this->registerJsFile('/js/editor/tinymce.min.js', [
@@ -26,49 +28,56 @@ $this->registerJsFile('/js/editor/tinymce.min.js', [
     </li>
 </ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-    <?= Alert::widget() ?>
-    <div role="tabpanel" class="tab-pane active" id="users">
-        <div class="row">
-            <?php $form = ActiveForm::begin(['enableClientValidation' => false]); ?>
+<div class="jumbotron">
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <?= Alert::widget() ?>
+        <div role="tabpanel" class="tab-pane active" id="users">
+            <div class="row">
+                <?php $form = ActiveForm::begin(['enableClientValidation' => false]); ?>
 
-            <div class="col-sm-12">
-                <?= $form
-                    ->field($model, 'name')->textInput(['maxlength' => 65]); ?>
-            </div>
-            <div class="col-sm-6">
-                <?= $form
-                    ->field($model, 'subject_id', ['template' => '{label}{input}{error}'])
-                    ->dropDownList($subjects); ?>
-            </div>
-            <div class="col-sm-6">
-                <?= $form
-                    ->field($model, 'type_id', ['template' => '{label}{input}{error}'])
-                    ->dropDownList($types); ?>
-            </div>
-            <div class="col-sm-12">
-                <?= $form
-                    ->field($model, 'text')->textarea(); ?>
-            </div>
+                <div class="col-sm-12">
+                    <?= $form
+                        ->field($model, 'name')->textInput(['maxlength' => 65]); ?>
+                </div>
+                <div class="col-sm-6">
+                    <label>Предмет: <?= Html::activeDropDownList($model, 'subject_id', ArrayHelper::map($subjects->find()->all(), 'id', 'name'),
+                            ['class' => 'form-control']) ?></label>
+                </div>
+                <div class="col-sm-6">
+                    <label>Тип
+                        документу: <?= Html::activeDropDownList($model, 'type_id', ArrayHelper::map($types->find()->all(), 'id', 'name'),
+                            ['class' => 'form-control']) ?></label>
+                </div>
+                <div class="col-sm-12">
+                    <?= $form
+                        ->field($model, 'text')->textarea(); ?>
+                </div>
 
-            <?= $form
-                ->field($model, 'owner_id', ['template' => '{input}'])
-                ->hiddenInput(['value' => Yii::$app->user->id]); ?>
+                <?= $form
+                    ->field($model, 'owner_id', ['template' => '{input}'])
+                    ->hiddenInput(['value' => Yii::$app->user->id]); ?>
 
-            <div class="col-sm-12">
-                <button type="submit" class="btn btn-default">Создать</button>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-default">Создать</button>
+                </div>
             </div>
+            <?php $form->end(); ?>
         </div>
-        <?php $form->end(); ?>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="roles">
-        <?php $form = ActiveForm::Begin(['action' => '/documents/fromfile', 'options' => ['enctype' => 'multipart/form-data']]) ?>
+        <div role="tabpanel" class="tab-pane" id="roles">
+            <?php $form = ActiveForm::Begin(['action' => '/documents/fromfile', 'options' => ['enctype' => 'multipart/form-data']]) ?>
+            <button class="btn btn-primary btn-raised"><?= $form->field($file_model, 'file')->fileInput(); ?></button>
             <div class="form-group">
-                <?= $form->field($file_model, 'file')->fileInput(); ?>
-                <p class="help-block"></p>
+                <label>Предмет: <?= Html::activeDropDownList($file_model, 'subject_id', ArrayHelper::map($subjects->find()->all(), 'id', 'name'),
+                        ['class' => 'form-control']) ?></label>
             </div>
-            <button type="submit" class="btn btn-default">Загрузить</button>
-        <?php $form->end(); ?>
+            <div class="form-group">
+                <label>Тип
+                    документу: <?= Html::activeDropDownList($file_model, 'type_id', ArrayHelper::map($types->find()->all(), 'id', 'name'),
+                        ['class' => 'form-control']) ?></label>
+            </div>
+            <?= Html::submitButton("Завантажити", ['class' => 'btn btn-primary']) ?>
+            <?php $form->end(); ?>
+        </div>
     </div>
 </div>

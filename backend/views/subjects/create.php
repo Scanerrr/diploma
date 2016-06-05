@@ -8,12 +8,14 @@ use yii\helpers\Html;
 
 $this->title = 'Додати новий предмет';
 ?>
-<div class="subjects-create">
+<div class="jumbotron">
+    <div class="subjects-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+        <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+        <?= $this->render('_form', [
+            'model' => $model,
+        ]) ?>
 
+    </div>
 </div>

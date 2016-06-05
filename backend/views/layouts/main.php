@@ -41,16 +41,9 @@ AppAsset::register($this);
         $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
     } else {
         $menuItems = [
-            ['label' => 'Домашняя страница', 'url' => ['/']],
+            ['label' => 'Домашня сторінка', 'url' => ['/']],
         ];
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Выйти (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link']
-            )
-            . Html::endForm()
-            . '</li>';
+        $menuItems[] = ['label' => 'Виход', 'url' => ['/site/logout']];
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],

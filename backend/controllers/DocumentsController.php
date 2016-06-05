@@ -32,11 +32,20 @@ class DocumentsController extends DefaultController
             $model->file = UploadedFile::getInstance($model, 'file');
 
             if (!empty($model->file)) {
-                $id = $model->upload();
-                if (!empty($id)) {
-                    return $this->redirect('/documents/view?id=' . $id);
+                $filename = $model->upload();
+                if (!empty($filename)) {
+                    $model->load(Yii::$app->request->post());
+                    $document = new Documents();
+                    $document->name = $model->getTheme($filename);
+                    $document->text = '<iframe style="width:100%;height:100vh" src="/' . $filename . '"></iframe>';
+                    $document->owner_id = Yii::$app->user->id;
+                    $document->type_id = $model->type_id;
+                    $document->subject_id = $model->subject_id;
+                    $document->save();
+                    Yii::trace($document->errors);
                 }
             }
+            Yii::trace($model->errors);
 
             Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
         }
@@ -53,24 +62,10 @@ class DocumentsController extends DefaultController
             $this->redirect('../');
         }
 
-        $data = Subjects::find()->asArray()->all();
-
-        $subjects = [];
-        foreach ($data as $d) {
-            $subjects[$d['id']] = $d['name'];
-        }
-
-        $data = DocumentTypes::find()->asArray()->all();
-
-        $types = [];
-        foreach ($data as $d) {
-            $types[$d['id']] = $d['name'];
-        }
-
         return $this->render('create', [
             'model' => $model,
-            'subjects' => $subjects,
-            'types' => $types,
+            'subjects' => new Subjects(),
+            'types' => new DocumentTypes(),
             'file_model' => $file_model
         ]);
     }
