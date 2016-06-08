@@ -22,21 +22,21 @@ class SignupForm extends Model
     public function rules()
     {
         return [
-            [['username', 'password', 'email', 'name'], 'required', 'message' => '{attribute} не может быть пустым'],
+            [['username', 'password', 'email', 'name'], 'required', 'message' => '{attribute} не може бути порожнім'],
 
             ['username', 'filter', 'filter' => 'trim'],
-            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким именем уже существует.'],
-            ['username', 'string', 'min' => 2, 'max' => 255, 'tooShort' => '{attribute} должно быть не короче {min} символов'],
+            ['username', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Користувач з таким ім\'ям уже існує.'],
+            ['username', 'string', 'min' => 2, 'max' => 255, 'tooShort' => '{attribute} повинно складати {min} символів'],
 
             ['name', 'filter', 'filter' => 'trim'],
-            ['name', 'string', 'min' => 2, 'max' => 255, 'tooShort' => '{attribute} должно быть не короче {min} символов'],
+            ['name', 'string', 'min' => 2, 'max' => 255, 'tooShort' => '{attribute} повинно складати {min} символів'],
 
             ['email', 'filter', 'filter' => 'trim'],
             ['email', 'email', 'message' => 'Неправильный Email.'],
             ['email', 'string', 'max' => 255],
-            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Пользователь с таким Email уже существует.'],
+            ['email', 'unique', 'targetClass' => '\common\models\User', 'message' => 'Коритсувач з таким Email вже існує.'],
 
-            ['password', 'string', 'min' => 6, 'tooShort' => 'Пароль должен быть не короче {min} символов'],
+            ['password', 'string', 'min' => 6, 'tooShort' => '{attribute} повинен складати {min} символів'],
 
             // verifyCode needs to be entered correctly
             ['verifyCode', 'captcha', 'message' => '{attribute} введен неправильно.'],
@@ -45,11 +45,11 @@ class SignupForm extends Model
 
     public function attributeLabels() {
         return [
-            'username' => 'Логин',
+            'username' => 'Логін',
             'password' => 'Пароль',
-            'name' => 'Имя пользователя',
+            'name' => "Ім'я користувача",
             'email' => 'Email',
-            'verifyCode' => 'Код проверки',
+            'verifyCode' => 'Код перевірки',
         ];
     }
 

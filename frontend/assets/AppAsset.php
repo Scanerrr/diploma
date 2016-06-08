@@ -8,6 +8,7 @@
 namespace frontend\assets;
 
 use yii\web\AssetBundle;
+use yii\web\View;
 
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
@@ -20,10 +21,14 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
     ];
+    public $jsOptions = [
+        'position' => View::POS_HEAD
+    ];
     public $js = [
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'backend\assets\Material',
     ];
 }

@@ -27,28 +27,24 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBarCustom::begin([
-        'brandLabel' => 'Электронная книга',
+        'brandLabel' => 'Електронна книга',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse',
         ],
+        'innerContainerOptions' => [
+            'class' => 'container-fluid'
+        ]
     ]);
     $menuItems = [
-        ['label' => 'Домашняя страница', 'url' => ['/site/index']],
-        ['label' => 'О сервисе', 'url' => ['/site/about']],
+        ['label' => 'Домашня сторінка', 'url' => ['/site/index']],
+        ['label' => 'О сервісі', 'url' => ['/site/about']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Реєстрація', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => 'Увійти', 'url' => ['/site/login']];
     } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link']
-            )
-            . Html::endForm()
-            . '</li>';
+        $menuItems[] = '<li>' . Html::a('Вийти', '/site/logout') .'</li>';
     }
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
@@ -57,14 +53,14 @@ AppAsset::register($this);
     NavBarCustom::end();
     ?>
 
-    <div class="container">
+    <div class="container-fluid">
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>
 </div>
 
 <footer class="footer">
-    <div class="container">
+    <div class="container-fluid">
         <p class="text-center">&copy; B&amp;V Inc. <?= date('Y') ?></p>
     </div>
 </footer>
