@@ -8,35 +8,38 @@ use yii\captcha\Captcha;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Signup';
+$this->title = 'Реєстрація';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-signup">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="jumbotron">
+            <div class="site-signup text-center">
+                <h1>Реєстрація</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-lg-offset-4">
+                        <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
 
-    <p>Please fill out the following fields to signup:</p>
+                        <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Ivan']) ?>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+                        <?= $form->field($model, 'name')->textInput(['placeholder' => 'Иванов Иван Иванович']) ?>
 
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'placeholder' => 'Ivan']) ?>
+                        <?= $form->field($model, 'email')->input('email', ['placeholder' => 'example@dom.com']) ?>
 
-            <?= $form->field($model, 'name')->textInput(['placeholder' => 'Иванов Иван Иванович']) ?>
+                        <?= $form->field($model, 'password')->passwordInput(['placeholder' => '*******']) ?>
 
-            <?= $form->field($model, 'email')->input('email', ['placeholder' => 'example@dom.com']) ?>
+                        <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                            'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6 col-lg-offset-1">{input}</div></div>',
+                        ]) ?>
 
-            <?= $form->field($model, 'password')->passwordInput(['placeholder' => '*******']) ?>
+                        <div class="form-group">
+                            <?= Html::submitButton('Реєстрація', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                        </div>
 
-            <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-            ]) ?>
-
-            <div class="form-group">
-                <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+                        <?php ActiveForm::end(); ?>
+                    </div>
+                </div>
             </div>
-
-            <?php ActiveForm::end(); ?>
         </div>
     </div>
 </div>

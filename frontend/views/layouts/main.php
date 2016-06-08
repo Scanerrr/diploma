@@ -30,7 +30,7 @@ AppAsset::register($this);
         'brandLabel' => 'Електронна книга',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse',
+            'class' => 'navbar navbar-default',
         ],
         'innerContainerOptions' => [
             'class' => 'container-fluid'
