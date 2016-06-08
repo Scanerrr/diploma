@@ -8,10 +8,26 @@ use common\models\DocumentTypes;
 use common\models\Subjects;
 use common\models\UploadFile;
 use Yii;
+use yii\filters\AccessControl;
 use yii\web\UploadedFile;
 
 class DocumentsController extends DefaultController
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['index', 'fromfile', 'create', 'getprev', 'getnext', 'view', 'delete'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
+        ];
+    }
     public function actionIndex()
     {
         $searchModel = new DocumentsSearch();

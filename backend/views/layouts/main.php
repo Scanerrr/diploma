@@ -66,6 +66,7 @@ AppAsset::register($this);
                     ];
                 }
                 $menuItems[] = ['label' => 'Документи', 'url' => '/documents/'];
+                $menuItems[] = ['label' => 'Тестування', 'url' => '/test/'];
                 echo Nav::widget([
                     'options' => ['class' => ''],
                     'items' => $menuItems,
