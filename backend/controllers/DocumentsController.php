@@ -58,10 +58,10 @@ class DocumentsController extends DefaultController
                     $document->type_id = $model->type_id;
                     $document->subject_id = $model->subject_id;
                     $document->save();
-                    Yii::trace($document->errors);
+                    Yii::trace($document->errors, 'DOC Err');
                 }
             }
-            Yii::trace($model->errors);
+            Yii::trace($model->errors, 'Model Err');
 
             Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
         }
