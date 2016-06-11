@@ -23,18 +23,30 @@ $this->title = 'Документи';
                         'emptyText' => 'По даному запиту нічого не знайдено',
                         'columns' => [
                             [
+                                'headerOptions' => [
+                                    'class' => 'text-center'
+                                ],
+                                'label' => 'Тема документу',
                                 'attribute' => 'name',
                                 'value' => function ($model) {
                                     return substr($model->name, 0, 35);
                                 },
                             ],
                             [
+                                'headerOptions' => [
+                                    'class' => 'text-center'
+                                ],
+                                'label' => "Ім'я користувача",
                                 'attribute' => 'username',
                                 'value' => function ($model) {
                                     return substr($model->user->name, 0, 35);
                                 }
                             ],
                             [
+                                'headerOptions' => [
+                                    'class' => 'text-center'
+                                ],
+                                'label' => 'Назва предмету',
                                 'attribute' => 'subject_name',
                                 'filter' => Html::activeDropDownList($filterModel, 'subject_name', ArrayHelper::map(Subjects::find()->asArray()->all(), 'name', 'name'), ['class' => 'form-control', 'prompt' => 'Всі предмети']),
                                 'value' => function ($model) {
@@ -44,6 +56,10 @@ $this->title = 'Документи';
                                 }
                             ],
                             [
+                                'headerOptions' => [
+                                    'class' => 'text-center'
+                                ],
+                                'label' => 'Тип документу',
                                 'attribute' => 'document_type',
                                 'filter' => Html::activeDropDownList($filterModel, 'document_type', ArrayHelper::map(DocumentTypes::find()->asArray()->all(), 'name', 'name'), ['class' => 'form-control', 'prompt' => 'Всі типи']),
                                 'value' => function ($model) {

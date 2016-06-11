@@ -20,13 +20,18 @@ use yii\helpers\Html;
             <div class="row">
                 <div class="col-sm-4"><strong>Iм`я викладача: </strong><span
                         style="text-decoration: underline;"><?= Html::encode($document['user']); ?></span></div>
-                <div class="col-sm-4"><strong>Назва предмету:</strong><span style="text-decoration: underline;"> <?= Html::encode($document['subject']); ?></span>
+                <div class="col-sm-4"><strong>Назва предмету:</strong><span
+                        style="text-decoration: underline;"> <?= Html::encode($document['subject']); ?></span>
                 </div>
-                <div class="col-sm-4"><strong>Тип документу:</strong><span style="text-decoration: underline;"> <?= Html::encode($document['type']); ?></div></span>
+                <div class="col-sm-4"><strong>Тип документу:</strong><span
+                        style="text-decoration: underline;"> <?= Html::encode($document['type']); ?></div>
+                </span>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <h3 class="text-info">Тема лекції: <span
+                    <h3 class="text-info">Тема лекції:
+                        <br>
+                        <span
                             style="word-wrap: break-word;text-decoration: underline;"><?= HTML::encode($document['name']) ?></span>
                     </h3></div>
                 <div class="col-sm-12">
