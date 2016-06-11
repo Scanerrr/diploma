@@ -29,17 +29,17 @@ $this->title = 'Документи';
                                 'label' => 'Тема документу',
                                 'attribute' => 'name',
                                 'value' => function ($model) {
-                                    return substr($model->name, 0, 35);
+                                    return substr($model->name, 0, 50);
                                 },
                             ],
                             [
                                 'headerOptions' => [
                                     'class' => 'text-center'
                                 ],
-                                'label' => "Ім'я користувача",
+                                'label' => "Ім'я викладача",
                                 'attribute' => 'username',
                                 'value' => function ($model) {
-                                    return substr($model->user->name, 0, 35);
+                                    return substr($model->user->name, 0, 50);
                                 }
                             ],
                             [
@@ -57,7 +57,8 @@ $this->title = 'Документи';
                             ],
                             [
                                 'headerOptions' => [
-                                    'class' => 'text-center'
+                                    'class' => 'text-center',
+                                    'style' => 'width: 110px'
                                 ],
                                 'label' => 'Тип документу',
                                 'attribute' => 'document_type',

@@ -22,7 +22,7 @@ $this->title = 'My Yii Application';
                         <h1>Документи</h1>
                         <p>Сторінка зі всіма єлектронними підручниками.</p>
 
-                        <?= \yii\helpers\Html::a('Документи', '/documents', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
+                        <?= \yii\helpers\Html::a('Перейти', '/documents', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -30,7 +30,7 @@ $this->title = 'My Yii Application';
                         <h1>Тестування</h1>
                         <p>Сторінка з тестами по кожному предмету.</p>
 
-                        <?= \yii\helpers\Html::a('Тестуватися', '/tests', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
+                        <?= \yii\helpers\Html::a('Перейти', '/test/', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
                     </div>
                 </div>
             </div>
