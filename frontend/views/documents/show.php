@@ -7,11 +7,11 @@ use yii\helpers\Html;
         <div class="jumbotron">
             <div class="row">
                 <div class="col-sm-12">
-                    <a id="prev" class="btn btn-raised btn-xs btn-primary"
+                    <a id="prev" class="btn btn-raised btn-xs"
                        href="/documents/getprev?id=<?= $document['id'] ?>">
                         <div class="glyphicon glyphicon-chevron-left"></div>
                     </a>
-                    <a id="next" class="btn btn-raised btn-xs btn-primary"
+                    <a id="next" class="btn btn-raised btn-xs"
                        href="/documents/getnext?id=<?= $document['id'] ?>">
                         <div class="glyphicon glyphicon-chevron-right"></div>
                     </a>
