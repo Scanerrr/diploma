@@ -2,6 +2,7 @@
 
 namespace common\modules\controllers;
 
+use common\models\Questions;
 use common\models\Tests;
 use common\models\TestsSearch;
 use common\models\User;
@@ -72,6 +73,12 @@ class IndexController extends Controller
         $id = Yii::$app->request->get('id');
         $id = intval($id);
         $test = Tests::find()->where(['id' => $id])->one();
+
+        $question = new Questions();
+        if ($question->load(Yii::$app->request->post) && $question->validate()) {
+            $question->test_id = $id;
+            $question->save();
+        }
 
         $user_role = Yii::$app->session->get('role');
         // if user is teacher then allows to create tests

@@ -4,6 +4,7 @@ namespace frontend\controllers;
 
 use common\models\Documents;
 use common\models\DocumentsSearch;
+use DOMDocument;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -51,8 +52,21 @@ class DocumentsController extends Controller
             ->asArray()
             ->one();
 
+        $replacement = Yii::getAlias('@uploads');
 
-        Yii::trace($document['text'], 'text');
+        // get text of documents and change links in there for images and iframes
+        $dom = new DOMDocument;
+        $dom->loadHTML($document['text']);
+        $images = $dom->getElementsByTagName('img');
+        foreach ($images as $image) {
+            $image->setAttribute('src', $replacement  . '/uploads/' . $image->getAttribute('src'));
+        }
+        $iframes = $dom->getElementsByTagName('iframe');
+        foreach ($iframes as $iframe) {
+            $iframe->setAttribute('src', $replacement . $iframe->getAttribute('src'));
+        }
+        $document['text'] = $dom->saveHTML();
+
         if (!empty($document)) {
             return $this->render('show', [
                 'document' => $document,

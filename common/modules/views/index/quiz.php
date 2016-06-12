@@ -16,9 +16,10 @@
                     </span>
                 </div>
             </div>
+            <!--QUESTIONS-->
             <div class="row">
                 <div class="col-sm-12">
-                    <!--QUESTIONS-->
+
                 </div>
             </div>
         </div>
