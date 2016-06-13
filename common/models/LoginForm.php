@@ -78,13 +78,13 @@ class LoginForm extends Model
 
                 if ($backend) {
                     if ($this->_user->role != User::ROLE_STUDENT) {
-                        return Yii::$app->user->login($this->_user, $this->rememberMe ? 3600 * 24 * 30 : 0);
+                        return Yii::$app->user->login($this->_user, 0);
                     } else {
-                        Yii::$app->session->setFlash('error', 'У данного пользователя нет прав доступа.<br> Обратитесь к администратору.');
+                        Yii::$app->session->setFlash('error', 'У даного користувача немає прав доступу.<br> Зверніться до адміністратора.');
                         return false;
                     }
                 } else {
-                    return Yii::$app->user->login($this->_user, $this->rememberMe ? 3600 * 24 * 30 : 0);
+                    return Yii::$app->user->login($this->_user, 0);
                 }
             } else {
                 return false;

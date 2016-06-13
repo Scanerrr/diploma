@@ -44,8 +44,8 @@ class Roles extends ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Название роли',
-            'description' => 'Описание',
+            'name' => 'Назва ролі',
+            'description' => 'Опис',
         ];
     }
 

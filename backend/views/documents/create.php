@@ -21,10 +21,9 @@ $this->registerJsFile('/js/editor/tinymce.min.js', [
     })
 </script>
 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#users" aria-controls="home" role="tab" data-toggle="tab">Создать
-            вручную</a>
+    <li role="presentation" class="active"><a href="#users" aria-controls="home" role="tab" data-toggle="tab">Створити вручну</a>
     </li>
-    <li role="presentation"><a href="#roles" aria-controls="profile" role="tab" data-toggle="tab">Загрузка с файла</a>
+    <li role="presentation"><a href="#roles" aria-controls="profile" role="tab" data-toggle="tab">Завантажити файл</a>
     </li>
 </ul>
 
@@ -59,7 +58,7 @@ $this->registerJsFile('/js/editor/tinymce.min.js', [
                     ->hiddenInput(['value' => Yii::$app->user->id]); ?>
 
                 <div class="col-sm-12">
-                    <button type="submit" class="btn btn-default">Создать</button>
+                    <button type="submit" class="btn btn-default">Створити</button>
                 </div>
             </div>
             <?php $form->end(); ?>

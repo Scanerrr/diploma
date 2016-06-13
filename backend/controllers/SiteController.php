@@ -48,7 +48,7 @@ class SiteController extends DefaultController
 
     public function actionIndex()
     {
-        return $this->render('index');
+        return $this->redirect('/documents');
     }
 
     public function actionLogin()

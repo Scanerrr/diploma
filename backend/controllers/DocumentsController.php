@@ -28,6 +28,7 @@ class DocumentsController extends DefaultController
             ],
         ];
     }
+
     public function actionIndex()
     {
         $searchModel = new DocumentsSearch();
@@ -57,13 +58,17 @@ class DocumentsController extends DefaultController
                     $document->owner_id = Yii::$app->user->id;
                     $document->type_id = $model->type_id;
                     $document->subject_id = $model->subject_id;
-                    $document->save();
-                    Yii::trace($document->errors);
+                    if ($document->save()) {
+                        return $this->redirect('/documents/view?id=' . Yii::$app->getDb()->getLastInsertID());
+                    }
+                } else {
+                    Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
                 }
+            } else {
+                Yii::trace($model->errors);
+                Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
             }
-            Yii::trace($model->errors);
 
-            Yii::$app->session->setFlash('error', 'Не вдалося завантажити файл');
         }
         return $this->redirect('/documents/create');
     }

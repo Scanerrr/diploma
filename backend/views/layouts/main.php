@@ -28,7 +28,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBarCustom::begin([
-        'brandLabel' => 'Электронная книга',
+        'brandLabel' => 'Електронна книга',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse',
@@ -38,7 +38,7 @@ AppAsset::register($this);
         ]
     ]);
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Зайти', 'url' => ['/site/login']];
     } else {
         $menuItems = [
             ['label' => 'Домашня сторінка', 'url' => ['/']],
