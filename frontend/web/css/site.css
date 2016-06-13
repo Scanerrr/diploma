@@ -103,3 +103,20 @@ a.desc:after {
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+
+
+/*docs table*/
+.document-text {
+    padding: 5px;
+    border: 1px solid rgba(85, 85, 85, 0.15);
+    overflow: hidden;
+}
+
+.document-text table {
+    border-collapse: collapse;
+}
+
+.document-text table th,
+.document-text table td {
+    border: 1px solid #000;
+}

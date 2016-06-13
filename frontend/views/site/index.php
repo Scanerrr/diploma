@@ -5,53 +5,36 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
+    <?php if (Yii::$app->user->isGuest): ?>
 
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
+        <div class="jumbotron">
+            <h1>Електронна бібліотека</h1>
+            <p class="lead">Сайт для ознайомлення з навчальним матерілом.</p>
+            <?= \yii\helpers\Html::a('Увійти', '/site/login', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
+        </div>
+    <?php endif; ?>
 
-        <p class="lead">You have successfully created your Yii-powered application.</p>
+    <?php if (!Yii::$app->user->isGuest): ?>
+        <div class="body-content">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="jumbotron">
+                        <h1>Документи</h1>
+                        <p>Сторінка зі всіма єлектронними підручниками.</p>
 
-        <p><a class="btn btn-lg btn-primary btn-raised" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="jumbotron">
-                    <h2>Документи</h2>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu
-                        fugiat nulla pariatur.</p>
-
-                    <p><a class="btn btn-lg btn-primary btn-raised" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a>
-                    </p>
+                        <?= \yii\helpers\Html::a('Перейти', '/documents', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="jumbotron">
-                    <h2>Тестування</h2>
+                <div class="col-lg-6">
+                    <div class="jumbotron">
+                        <h1>Тестування</h1>
+                        <p>Сторінка з тестами по кожному предмету.</p>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip
-                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu
-                        fugiat nulla pariatur.</p>
-
-                    <p><a class="btn btn-lg btn-primary btn-raised" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+                        <?= \yii\helpers\Html::a('Перейти', '/test/', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
+                    </div>
                 </div>
-            </div>
-            <
             </div>
         </div>
-
-    </div>
+    <?php endif; ?>
+</div>
 </div>

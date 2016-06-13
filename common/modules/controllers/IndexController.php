@@ -2,8 +2,10 @@
 
 namespace common\modules\controllers;
 
+use common\models\Questions;
 use common\models\Tests;
 use common\models\TestsSearch;
+use common\models\User;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -20,7 +22,7 @@ class IndexController extends Controller
                 'class' => AccessControl::className(),
                 'rules' => [
                     [
-                        'actions' => ['index', 'create', 'edit'],
+                        'actions' => ['index', 'create', 'edit', 'quiz'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -52,20 +54,56 @@ class IndexController extends Controller
             $test->save();
             return $this->redirect('edit?id=' . Yii::$app->db->getLastInsertID());
         }
-        return $this->render('create', [
-            'test' => $test,
-        ]);
+
+        $user_role = Yii::$app->session->get('role');
+        // if user is teacher then allows to create tests
+        // for frontend and backend
+        if ($user_role == User::ROLE_TEACHER || $user_role === User::ROLE_ADMIN) {
+            return $this->render('create', [
+                'test' => $test,
+            ]);
+        } else {
+            return $this->goBack();
+        }
     }
 
     public function actionEdit()
     {
+
         $id = Yii::$app->request->get('id');
         $id = intval($id);
         $test = Tests::find()->where(['id' => $id])->one();
 
-        return $this->render('edit', [
+        $question = new Questions();
+        if ($question->load(Yii::$app->request->post) && $question->validate()) {
+            $question->test_id = $id;
+            $question->save();
+        }
+
+        $user_role = Yii::$app->session->get('role');
+        // if user is teacher then allows to create tests
+        // for frontend and backend
+        if ($user_role == User::ROLE_TEACHER || $user_role === User::ROLE_ADMIN) {
+            return $this->render('edit', [
+                'test' => $test,
+
+            ]);
+        } else {
+            return $this->goBack();
+        }
+    }
+
+    public function actionQuiz()
+    {
+
+        $id = Yii::$app->request->get('id');
+        $id = intval($id);
+        $test = Tests::find()->where(['id' => $id])->one();
+
+        return $this->render('quiz', [
             'test' => $test,
 
         ]);
+
     }
 }
