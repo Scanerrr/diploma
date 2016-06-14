@@ -1,5 +1,5 @@
 <?php
-
+$this->title = 'Створити тест';
 ?>
 <div class="row">
     <div class="col-sm-12">

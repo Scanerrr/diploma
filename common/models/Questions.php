@@ -30,7 +30,7 @@ class Questions extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['text', 'test_id'], 'required'],
+            [['text', 'test_id'], 'required', 'message' => 'Поле не може бути порожнім'],
             [['test_id'], 'integer'],
             [['text'], 'string', 'max' => 255],
             [['test_id'], 'exist', 'skipOnError' => true, 'targetClass' => Tests::className(), 'targetAttribute' => ['test_id' => 'id']],
@@ -44,7 +44,7 @@ class Questions extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'text' => 'Text',
+            'text' => 'Текст запитання',
             'test_id' => 'Test ID',
         ];
     }

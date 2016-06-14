@@ -3908,3 +3908,132 @@ $_SERVER = [
     ]
     'argc' => 1
 ]
+2016-06-13 15:06:18 [127.0.0.1][3][-][warning][yii\web\Session::init] Session is already started
+    in C:\OpenServer\domains\diploma\common\models\LoginForm.php:75
+    in C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php:83
+2016-06-13 15:06:18 [127.0.0.1][3][-][info][application] $_POST = [
+    '_csrf' => 'YnFIR1BVU2sWITA1HzAKXQRCBgMHDTcxIzgXMDEsaiAQOAoQJmwRHA=='
+    'LoginForm' => [
+        'username' => 'testtest'
+        'password' => 'testtest'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => 'd248d3704e0b9d99e8d97b9936d01cccd6a7bd615c7a20a06594fe6a7d5c67aea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tPxrOeY6f3NDWXdZAI_way9KrIBWv9Bw\";}'
+    'PHPSESSID' => 't39k2ohfp5pjd2a0pg2nt6u9b5'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 3
+    '__id' => 3
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '146'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://diploma.front'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://diploma.front/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=d248d3704e0b9d99e8d97b9936d01cccd6a7bd615c7a20a06594fe6a7d5c67aea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tPxrOeY6f3NDWXdZAI_way9KrIBWv9Bw%22%3B%7D; PHPSESSID=t39k2ohfp5pjd2a0pg2nt6u9b5'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '35542'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465819578.072
+    'REQUEST_TIME' => 1465819578
+    'argv' => []
+    'argc' => 0
+]
+2016-06-13 15:08:04 [127.0.0.1][3][7uocgufu4ne8nuflt6mle7c5d4][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Unknown bootstrapping component ID: debug in C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php:306
+Stack trace:
+#0 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(63): yii\base\Application->bootstrap()
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(267): yii\web\Application->bootstrap()
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Object.php(107): yii\base\Application->init()
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(206): yii\base\Object->__construct(Array)
+#4 C:\OpenServer\domains\diploma\frontend\web\index.php(17): yii\base\Application->__construct(Array)
+#5 {main}
+2016-06-13 15:08:04 [127.0.0.1][3][7uocgufu4ne8nuflt6mle7c5d4][info][application] $_COOKIE = [
+    '_csrf' => 'd248d3704e0b9d99e8d97b9936d01cccd6a7bd615c7a20a06594fe6a7d5c67aea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tPxrOeY6f3NDWXdZAI_way9KrIBWv9Bw\";}'
+    'PHPSESSID' => '7uocgufu4ne8nuflt6mle7c5d4'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 3
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://diploma.front/documents/view?id=3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=d248d3704e0b9d99e8d97b9936d01cccd6a7bd615c7a20a06594fe6a7d5c67aea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tPxrOeY6f3NDWXdZAI_way9KrIBWv9Bw%22%3B%7D; PHPSESSID=7uocgufu4ne8nuflt6mle7c5d4'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '35563'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1465819684.039
+    'REQUEST_TIME' => 1465819684
+    'argv' => []
+    'argc' => 0
+]

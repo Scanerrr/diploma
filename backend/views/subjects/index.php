@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
 
         <p>
-            <?= Html::a('Додати предмет', ['create'], ['class' => 'btn btn-success btn-raised']) ?>
+            <?= Html::a('Додати предмет', ['create'], ['class' => 'btn btn-primary']) ?>
         </p>
         <?php Pjax::begin(); ?>
         <?php if ($dataProvider->getCount() > 0) { ?>
