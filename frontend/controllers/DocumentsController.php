@@ -57,7 +57,7 @@ class DocumentsController extends Controller
 
             // get text of documents and change links in there for images and iframes
             $dom = new DOMDocument;
-            $dom->loadHTML($document['text']);
+            $dom->loadHTML(mb_convert_encoding($document['text'], 'HTML-ENTITIES', 'UTF-8'));
             $images = $dom->getElementsByTagName('img');
             foreach ($images as $image) {
                 $image->setAttribute('src', $replacement . '/uploads/' . $image->getAttribute('src'));
