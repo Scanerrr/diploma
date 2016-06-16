@@ -10,6 +10,7 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property integer $owner_id
+ * @property integer $tries
  *
  * @property Questions[] $questions
  * @property Results[] $results
@@ -31,8 +32,8 @@ class Tests extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'owner_id'], 'required', 'message' => '{attribute} не може бути порожнім'],
-            [['owner_id'], 'integer'],
+            [['name', 'owner_id', 'tries'], 'required', 'message' => '{attribute} не може бути порожнім'],
+            [['owner_id', 'tries'], 'integer', 'message' => 'Поле повинно містити лише цифри'],
             [['name'], 'string', 'max' => 255],
             [['owner_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['owner_id' => 'id']],
         ];
@@ -47,6 +48,7 @@ class Tests extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Назва тесту',
             'owner_id' => 'Користувач',
+            'tries' => 'Кількість спроб'
         ];
     }
 

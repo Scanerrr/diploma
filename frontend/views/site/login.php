@@ -24,10 +24,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
                         <?= $form->field($model, 'password')->passwordInput() ?>
 
-                        <div style="color:#999;margin:1em 0">
-                            Якщо забули пароль <?= Html::a('зброс', ['site/request-password-reset']) ?>.
-                        </div>
-
                         <div class="form-group">
                             <?= Html::submitButton('Увійти', ['class' => 'btn btn-raised btn-primary', 'name' => 'login-button']) ?>
                         </div>

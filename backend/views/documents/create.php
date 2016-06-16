@@ -21,7 +21,8 @@ $this->registerJsFile('/js/editor/tinymce.min.js', [
     })
 </script>
 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#users" aria-controls="home" role="tab" data-toggle="tab">Створити вручну</a>
+    <li role="presentation" class="active"><a href="#users" aria-controls="home" role="tab" data-toggle="tab">Створити
+            вручну</a>
     </li>
     <li role="presentation"><a href="#roles" aria-controls="profile" role="tab" data-toggle="tab">Завантажити файл</a>
     </li>
@@ -64,19 +65,31 @@ $this->registerJsFile('/js/editor/tinymce.min.js', [
             <?php $form->end(); ?>
         </div>
         <div role="tabpanel" class="tab-pane" id="roles">
-            <?php $form = ActiveForm::Begin(['action' => '/documents/fromfile', 'options' => ['enctype' => 'multipart/form-data']]) ?>
-            <button class="btn btn-primary btn-raised"><?= $form->field($file_model, 'file')->fileInput(); ?></button>
-            <div class="form-group">
-                <label>Предмет: <?= Html::activeDropDownList($file_model, 'subject_id', ArrayHelper::map($subjects->find()->all(), 'id', 'name'),
-                        ['class' => 'form-control']) ?></label>
+            <div class="content-loader">
+                <?php $form = ActiveForm::Begin(['action' => '/documents/fromfile', 'options' => ['enctype' => 'multipart/form-data']]) ?>
+                <button
+                    class="btn btn-primary btn-raised"><?= $form->field($file_model, 'file')->fileInput(); ?></button>
+                <div class="form-group">
+                    <label>Предмет: <?= Html::activeDropDownList($file_model, 'subject_id', ArrayHelper::map($subjects->find()->all(), 'id', 'name'),
+                            ['class' => 'form-control']) ?></label>
+                </div>
+                <div class="form-group">
+                    <label>Тип
+                        документу: <?= Html::activeDropDownList($file_model, 'type_id', ArrayHelper::map($types->find()->all(), 'id', 'name'),
+                            ['class' => 'form-control']) ?></label>
+                </div>
+                <?= Html::submitButton("Завантажити", ['class' => 'btn btn-primary loader']) ?>
+                <?php $form->end(); ?>
             </div>
-            <div class="form-group">
-                <label>Тип
-                    документу: <?= Html::activeDropDownList($file_model, 'type_id', ArrayHelper::map($types->find()->all(), 'id', 'name'),
-                        ['class' => 'form-control']) ?></label>
+            <div class="img-loader" style="display: none;">
+                <img src="/img/default.gif" alt="Loader...">
             </div>
-            <?= Html::submitButton("Завантажити", ['class' => 'btn btn-primary']) ?>
-            <?php $form->end(); ?>
         </div>
     </div>
 </div>
+<script>
+    $('.loader').on('click', function () {
+        $('.content-loader').hide();
+        $('.img-loader').show();
+    });
+</script>

@@ -7,18 +7,19 @@ class TestsSearch extends Tests
 {
     public $name;
     public $username;
+    public $used;
 
     public function rules()
     {
         return [
-            [['name', 'username'], 'safe'],
+            [['name', 'username', 'used'], 'safe'],
         ];
     }
 
     public function search($params)
     {
         $query = Tests::find()
-            ->joinWith(['owner']);
+            ->joinWith(['owner', 'results']);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

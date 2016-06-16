@@ -2,7 +2,6 @@
 use common\models\User;
 use yii\helpers\Html;
 
-$user_role = Yii::$app->session->get('role');
 $this->title = 'Тести';
 ?>
 <div class="row">
@@ -10,11 +9,8 @@ $this->title = 'Тести';
         <div class="jumbotron">
             <div class="test-default-index">
                 <h1>Тести</h1>
-
-                <!--SHOW button only for teacher-->
-                <?php if ($user_role != User::ROLE_STUDENT) { ?>
-                    <?= Html::a('Створити тест', 'index/create', ['class' => 'btn btn-primary']) ?>
-                <?php } ?>
+                <?= Html::a('Створити тест', 'index/create', ['class' => 'btn btn-primary']) ?>
+                <?= Html::a('Переглянути результати тестів', 'index/results', ['class' => 'btn btn-primary']) ?>
                 <?php \yii\widgets\Pjax::begin() ?>
                 <?= \yii\grid\GridView::widget([
                     'dataProvider' => $dp,
@@ -27,10 +23,8 @@ $this->title = 'Тести';
                             ],
                             'attribute' => 'name',
                             'format' => 'raw',
-                            'value' => function ($model) use ($user_role) {
-                                if ($user_role != User::ROLE_STUDENT)
-                                    return Html::a($model->name, 'index/edit?id=' . $model->id);
-                                return Html::a($model->name, 'student/quiz?id=' . $model->id);
+                            'value' => function ($model) {
+                                return Html::a($model->name, 'index/edit?id=' . $model->id);
                             }
                         ],
                         [
@@ -42,13 +36,16 @@ $this->title = 'Тести';
                             'value' => 'owner.name'
                         ],
                         [
+                            'label' => 'Спроби',
+                            'value' => 'tries'
+                        ],
+                        [
                             'format' => 'raw',
-                            'value' => function ($obj) use ($user_role) {
-                                if ($user_role != User::ROLE_STUDENT)
-                                    return Html::a('<span class="glyphicon glyphicon-remove"></span>', '/test/index/delete?id=' . $obj->id);
-                                return '';
+                            'value' => function ($obj) {
+                                return Html::a('<span class="glyphicon glyphicon-remove"></span>', '/test/index/delete?id=' . $obj->id);
                             }
-                        ]
+                        ],
+
                     ]
                 ]) ?>
                 <?php \yii\widgets\Pjax::end() ?>

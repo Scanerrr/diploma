@@ -30,7 +30,7 @@ $this->title = 'My Yii Application';
                         <h1>Тестування</h1>
                         <p>Сторінка з тестами по кожному предмету.</p>
 
-                        <?= \yii\helpers\Html::a('Перейти', '/test/', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
+                        <?= \yii\helpers\Html::a('Перейти', '/test/student', ['class' => 'btn btn-raised btn-lg btn-primary']) ?>
                     </div>
                 </div>
             </div>

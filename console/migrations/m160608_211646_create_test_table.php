@@ -16,6 +16,7 @@ class m160608_211646_create_test_table extends Migration
             'id' => $this->primaryKey(),
             'name' => $this->string()->notNull(),
             'owner_id' => $this->integer()->notNull(),
+            'tries' => $this->integer()->notNull()->defaultValue(1)
         ]);
 
         $this->createTable('{{%results}}', [
@@ -25,7 +26,7 @@ class m160608_211646_create_test_table extends Migration
             'test_id' => $this->integer()->notNull(),
         ]);
 
-            $this->createTable('{{%questions}}', [
+        $this->createTable('{{%questions}}', [
             'id' => $this->primaryKey(),
             'text' => $this->string()->notNull(),
             'test_id' => $this->integer()->notNull(),
