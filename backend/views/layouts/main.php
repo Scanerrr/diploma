@@ -52,31 +52,35 @@ AppAsset::register($this);
     NavBarCustom::end();
     ?>
     <div class="container-fluid">
+
         <div class="row">
             <?php if (!Yii::$app->user->isGuest) { ?>
             <div class="col-sm-2">
-                <?php
+                <div class="jumbotron">
+                    <?php
 
-                $menuItems = [];
-                //if user is admin
-                if($user_role === User::ROLE_ADMIN) {
-                    $menuItems = [
-                        ['label' => 'Користувачі', 'url' => '/users/'],
-                        ['label' => 'Предмети', 'url' => '/subjects/']
-                    ];
-                }
-                $menuItems[] = ['label' => 'Документи', 'url' => '/documents/'];
-                $menuItems[] = ['label' => 'Тестування', 'url' => '/test/'];
-                echo Nav::widget([
-                    'options' => ['class' => ''],
-                    'items' => $menuItems,
-                ]);
-                ?>
+                    $menuItems = [];
+                    //if user is admin
+                    if ($user_role === User::ROLE_ADMIN) {
+                        $menuItems = [
+                            ['label' => 'Користувачі', 'url' => '/users/'],
+                            ['label' => 'Предмети', 'url' => '/subjects/']
+                        ];
+                    }
+                    $menuItems[] = ['label' => 'Документи', 'url' => '/documents/'];
+                    $menuItems[] = ['label' => 'Тестування', 'url' => '/test/'];
+                    echo Nav::widget([
+                        'options' => ['class' => ''],
+                        'items' => $menuItems,
+                    ]);
+                    ?>
+                </div>
             </div>
             <div class="col-sm-10">
                 <?php } else echo '<div class="col-sm-12">'; ?>
                 <?= $content ?>
             </div>
+
         </div>
     </div>
 </div>
