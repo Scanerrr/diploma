@@ -34,9 +34,23 @@ $this->title = 'Тести';
                             'value' => 'owner.name'
                         ],
                         [
+                            'headerOptions' => [
+                                'class' => 'text-center',
+                                'width' => '30px'
+                            ],
                             'label' => 'Спроби',
                             'value' => function ($obj) {
                                 return count($obj->results) . '/' . $obj->tries;
+                            }
+                        ],
+                        [
+                            'headerOptions' => [
+                                'class' => 'text-center',
+                                'width' => '35px'
+                            ],
+                            'label' => 'К-сть питань',
+                            'value' => function ($obj) {
+                                return count($obj->questions);
                             }
                         ]
                     ]

@@ -8840,3 +8840,386 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2016-06-17 00:16:50 [127.0.0.1][1][-][warning][yii\web\Session::init] Session is already started
+    in C:\OpenServer\domains\diploma\common\models\LoginForm.php:75
+    in C:\OpenServer\domains\diploma\frontend\controllers\SiteController.php:83
+2016-06-17 00:16:49 [127.0.0.1][1][-][info][application] $_POST = [
+    '_csrf' => 'dU5NLVRLNXkHBQB/IzJeNz9jK18yLU1NQyAEGyECcggvCjpmZSxnLQ=='
+    'LoginForm' => [
+        'username' => 'test'
+        'password' => 'testtest'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rKMRwykNJ-frffx46nI6uIGqZDwK1gRT\";}'
+    'PHPSESSID' => 'fujv4val2f8h6nfgfb296sb5m0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '144'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://diploma.front'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://diploma.front/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rKMRwykNJ-frffx46nI6uIGqZDwK1gRT%22%3B%7D; PHPSESSID=fujv4val2f8h6nfgfb296sb5m0'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '22380'
+    'REDIRECT_URL' => '/site/login'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1466111809.698
+    'REQUEST_TIME' => 1466111809
+    'argv' => []
+    'argc' => 0
+]
+2016-06-17 00:16:55 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][error][yii\base\ErrorException:2] yii\base\ErrorException: Division by zero in C:\OpenServer\domains\diploma\common\modules\views\student\pass.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\modules\views\student\pass.php(19): yii\base\ErrorHandler->handleError(2, 'Division by zer...', 'C:\\OpenServer\\d...', 19, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(common\modules\controllers\StudentController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('pass', Array, Object(common\modules\controllers\StudentController))
+#5 C:\OpenServer\domains\diploma\common\modules\controllers\StudentController.php(86): yii\base\Controller->render('pass', Array)
+#6 [internal function]: common\modules\controllers\StudentController->actionPass(2, 0)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('pass', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('test/student/pa...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-17 00:16:55 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][info][application] $_GET = [
+    'id' => '2'
+    '_pjax' => '#w0'
+]
+
+$_COOKIE = [
+    '_csrf' => '9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rKMRwykNJ-frffx46nI6uIGqZDwK1gRT\";}'
+    'PHPSESSID' => 'no9pn60182ldhkvronurk7c0q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'UkU4X05ZQkQgDnUNOSApChhoXi0oPzpwZCtxaTsQBTUIAU8Ufz4QEA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#w0'
+    'HTTP_REFERER' => 'http://diploma.front/test/student'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rKMRwykNJ-frffx46nI6uIGqZDwK1gRT%22%3B%7D; PHPSESSID=no9pn60182ldhkvronurk7c0q3'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '22385'
+    'REDIRECT_URL' => '/test/student/pass'
+    'REDIRECT_QUERY_STRING' => 'id=2&_pjax=%23w0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=2&_pjax=%23w0'
+    'REQUEST_URI' => '/test/student/pass?id=2&_pjax=%23w0'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1466111815.005
+    'REQUEST_TIME' => 1466111815
+    'argv' => [
+        0 => 'id=2&_pjax=%23w0'
+    ]
+    'argc' => 1
+]
+2016-06-17 00:16:55 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][error][yii\base\ErrorException:2] yii\base\ErrorException: Division by zero in C:\OpenServer\domains\diploma\common\modules\views\student\pass.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\modules\views\student\pass.php(19): yii\base\ErrorHandler->handleError(2, 'Division by zer...', 'C:\\OpenServer\\d...', 19, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(common\modules\controllers\StudentController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('pass', Array, Object(common\modules\controllers\StudentController))
+#5 C:\OpenServer\domains\diploma\common\modules\controllers\StudentController.php(86): yii\base\Controller->render('pass', Array)
+#6 [internal function]: common\modules\controllers\StudentController->actionPass(2, 0)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('pass', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('test/student/pa...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-17 00:16:55 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_csrf' => '9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rKMRwykNJ-frffx46nI6uIGqZDwK1gRT\";}'
+    'PHPSESSID' => 'no9pn60182ldhkvronurk7c0q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://diploma.front/test/student'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rKMRwykNJ-frffx46nI6uIGqZDwK1gRT%22%3B%7D; PHPSESSID=no9pn60182ldhkvronurk7c0q3'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '22380'
+    'REDIRECT_URL' => '/test/student/pass'
+    'REDIRECT_QUERY_STRING' => 'id=2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=2'
+    'REQUEST_URI' => '/test/student/pass?id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1466111815.137
+    'REQUEST_TIME' => 1466111815
+    'argv' => [
+        0 => 'id=2'
+    ]
+    'argc' => 1
+]
+2016-06-17 00:17:01 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][error][yii\base\ErrorException:2] yii\base\ErrorException: Division by zero in C:\OpenServer\domains\diploma\common\modules\views\student\pass.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\modules\views\student\pass.php(19): yii\base\ErrorHandler->handleError(2, 'Division by zer...', 'C:\\OpenServer\\d...', 19, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(common\modules\controllers\StudentController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('pass', Array, Object(common\modules\controllers\StudentController))
+#5 C:\OpenServer\domains\diploma\common\modules\controllers\StudentController.php(86): yii\base\Controller->render('pass', Array)
+#6 [internal function]: common\modules\controllers\StudentController->actionPass(2, 0)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('pass', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('test/student/pa...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-17 00:17:01 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][info][application] $_GET = [
+    'id' => '2'
+    '_pjax' => '#w0'
+]
+
+$_COOKIE = [
+    '_csrf' => '9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rKMRwykNJ-frffx46nI6uIGqZDwK1gRT\";}'
+    'PHPSESSID' => 'no9pn60182ldhkvronurk7c0q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_X_CSRF_TOKEN' => 'aWFTakNMeXcbKh44NDUSOSNMNRglKgFDXw8aXDYFPgYzJSQhcisrIw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#w0'
+    'HTTP_REFERER' => 'http://diploma.front/test/student'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rKMRwykNJ-frffx46nI6uIGqZDwK1gRT%22%3B%7D; PHPSESSID=no9pn60182ldhkvronurk7c0q3'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '22388'
+    'REDIRECT_URL' => '/test/student/pass'
+    'REDIRECT_QUERY_STRING' => 'id=2&_pjax=%23w0'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=2&_pjax=%23w0'
+    'REQUEST_URI' => '/test/student/pass?id=2&_pjax=%23w0'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1466111821.655
+    'REQUEST_TIME' => 1466111821
+    'argv' => [
+        0 => 'id=2&_pjax=%23w0'
+    ]
+    'argc' => 1
+]
+2016-06-17 00:17:01 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][error][yii\base\ErrorException:2] yii\base\ErrorException: Division by zero in C:\OpenServer\domains\diploma\common\modules\views\student\pass.php:19
+Stack trace:
+#0 C:\OpenServer\domains\diploma\common\modules\views\student\pass.php(19): yii\base\ErrorHandler->handleError(2, 'Division by zer...', 'C:\\OpenServer\\d...', 19, Array)
+#1 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(325): require('C:\\OpenServer\\d...')
+#2 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\OpenServer\\d...', Array)
+#3 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\OpenServer\\d...', Array, Object(common\modules\controllers\StudentController))
+#4 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('pass', Array, Object(common\modules\controllers\StudentController))
+#5 C:\OpenServer\domains\diploma\common\modules\controllers\StudentController.php(86): yii\base\Controller->render('pass', Array)
+#6 [internal function]: common\modules\controllers\StudentController->actionPass(2, 0)
+#7 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('pass', Array)
+#10 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('test/student/pa...', Array)
+#11 C:\OpenServer\domains\diploma\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\OpenServer\domains\diploma\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-17 00:17:01 [127.0.0.1][1][no9pn60182ldhkvronurk7c0q3][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_COOKIE = [
+    '_csrf' => '9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rKMRwykNJ-frffx46nI6uIGqZDwK1gRT\";}'
+    'PHPSESSID' => 'no9pn60182ldhkvronurk7c0q3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'role' => 1
+    '__id' => 1
+]
+
+$_SERVER = [
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'diploma.front'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://diploma.front/test/student'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4,uk;q=0.2'
+    'HTTP_COOKIE' => '_csrf=9d41098b73cbd8728fe4ff341aeb0fa888b95094d0cf9f9562dd218f3199f08ba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rKMRwykNJ-frffx46nI6uIGqZDwK1gRT%22%3B%7D; PHPSESSID=no9pn60182ldhkvronurk7c0q3'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-7-x64\\ext;c:\\openserver\\modules\\php\\PHP-7-x64\\pear;c:\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-7-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'diploma.front'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/diploma/frontend/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/diploma/frontend/web/index.php'
+    'REMOTE_PORT' => '22389'
+    'REDIRECT_URL' => '/test/student/pass'
+    'REDIRECT_QUERY_STRING' => 'id=2'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=2'
+    'REQUEST_URI' => '/test/student/pass?id=2'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1466111821.776
+    'REQUEST_TIME' => 1466111821
+    'argv' => [
+        0 => 'id=2'
+    ]
+    'argc' => 1
+]

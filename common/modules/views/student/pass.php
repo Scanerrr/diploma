@@ -16,7 +16,7 @@ use yii\helpers\Html;
                         <strong><?= $test->name ?></strong>
                     </h3>
                     <div class="progress progress-striped active">
-                        <div class="progress-bar" style="width: <?= $curr * 100 /$all;  ?>%"></div>
+                        <div class="progress-bar" style="width: <?= $curr * 100 / $all; ?>%"></div>
                     </div>
                 </div>
             </div>

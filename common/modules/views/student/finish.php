@@ -25,7 +25,7 @@ $this->title = 'Результат';
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <?= \yii\helpers\Html::a('Назад на сторінку тестів', '/test', ['class' => 'btn btn-primary btn-raised']) ?>
+                    <?= \yii\helpers\Html::a('Назад на сторінку тестів', '/test/student', ['class' => 'btn btn-primary btn-raised']) ?>
                 </div>
             </div>
         </div>

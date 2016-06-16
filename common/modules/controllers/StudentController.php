@@ -76,8 +76,8 @@ class StudentController extends Controller
 
             $test = Tests::findOne(['id' => $id]);
 
-            if (count($test->results) >= $test->tries) {
-                return $this->redirect('/test');
+            if (count($test->results) >= $test->tries || count($test->questions) === 0) {
+                return $this->redirect('/test/student');
             }
 
             return $this->render('pass', [
@@ -86,7 +86,7 @@ class StudentController extends Controller
                 'all' => count($test->questions)
             ]);
         }
-        return $this->redirect('/test');
+        return $this->redirect('/test/student');
     }
 
     public function actionFinish($id = null)
